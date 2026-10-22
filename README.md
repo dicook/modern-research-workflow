@@ -19,7 +19,7 @@ No expertise in version control, package development or Quarto is needed. You sh
 
 ## Outline
 
-- 0:00-0:15 Welcome and setup
+- 0:00-0:15 Welcome and overview
 - 0:15-0:55 Reproducibility and collaboration with GitHub
     - Structuring a research project: folders, naming, README, relative paths
     - Git basics: commit, push, pull, and recovering from mistakes using history
