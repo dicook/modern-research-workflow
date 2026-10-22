@@ -43,11 +43,11 @@ No expertise in version control, package development or Quarto is needed. You sh
 
 ## Materials
 
-[Session 1 Slides](https://dicook.github.io/modern-research-workflow/slides1.html)
+[Session 1 Slides](https://dicook.github.io/modern-research-workflow/slides1.html) NOT READY YET
 
-[Session 2 Slides](https://dicook.github.io/modern-research-workflow/slides2.html)
+[Session 2 Slides](https://dicook.github.io/modern-research-workflow/slides2.html) NOT READY YET
 
-[Zip file of materials](https://dicook.github.io/modern-research-workflow/tutorial.zip)
+[Zip file of materials](https://dicook.github.io/modern-research-workflow/tutorial.zip) NOT READY YET
 
 
 ## Copyright
