@@ -1,0 +1,256 @@
+---
+title: "Before you arrive: getting set up"
+subtitle: "A Modern Research Workflow with R and GitHub"
+format:
+  html:
+    toc: true
+    toc-title: "Steps"
+---
+
+Welcome, and thank you for joining us. <span style="font-size: 1.8em;"> 🫶 </span>
+
+To make the most of our time together, we ask you to set up your laptop **before the workshop**. It takes about **40 minutes** and you only do it once. Nothing here is hard: it is mostly downloading, clicking "Next", and signing in.
+
+::: {.callout-tip}
+## Stuck? You are not alone
+Software installs can be fiddly, and that is completely normal. If any step does not work, **stop, make a note of what happened, and seek help**. The 30 minutes prior to the workshop are set aside for setup help. You can also email the organisers with a screenshot of the problem that you are encountering, in the day prior to the workshop.
+:::
+
+```{=html}
+<svg viewBox="0 0 800 150" role="img" aria-label="Seven steps: Account, R, RStudio, Git, GitHub Desktop, Packages, Check" style="width:100%;max-width:800px;color:inherit">
+<line x1="60" y1="50" x2="720" y2="50" stroke="currentColor" stroke-opacity=".3" stroke-width="3"/>
+<g font-family="Helvetica, Arial, sans-serif" text-anchor="middle" fill="currentColor">
+<g font-size="22" font-weight="700">
+<circle cx="60" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"/><text x="60" y="58">1</text>
+<circle cx="170" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"/><text x="170" y="58">2</text>
+<circle cx="280" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"/><text x="280" y="58">3</text>
+<circle cx="390" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"/><text x="390" y="58">4</text>
+<circle cx="500" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"/><text x="500" y="58">5</text>
+<circle cx="610" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"/><text x="610" y="58">6</text>
+<circle cx="720" cy="50" r="28" fill="#2f9e6a" fill-opacity=".3" stroke="#2f9e6a" stroke-width="3"/><text x="720" y="58">✓</text>
+</g>
+<g font-size="17">
+<text x="60" y="108">GitHub</text><text x="60" y="130">account</text>
+<text x="170" y="108">R</text>
+<text x="280" y="108">RStudio</text>
+<text x="390" y="108">Git</text>
+<text x="500" y="108">GitHub</text><text x="500" y="130">Desktop</text>
+<text x="610" y="108">R</text><text x="610" y="130">packages</text>
+<text x="720" y="108">Final</text><text x="720" y="130">check</text>
+</g></g></svg>
+```
+
+## Step 1: Create a GitHub account (5 minutes)
+
+GitHub is the website where we will store and share our projects.
+
+1. Go to [github.com/signup](https://github.com/signup)
+2. Enter your email, choose a password and a **username**
+3. Check your inbox and **verify your email address**
+
+::: {.callout-note}
+## Choosing a username
+Pick something you will be happy to put on a CV or paper for years, such as `firstname-lastname`. **Already have an account?** *Brilliant, you can skip ahead 🏃🏾‍♀️‍➡️ and just make sure you can sign in.*
+:::
+
+GitHub may ask you to set up **two-factor authentication**. Follow the prompts (the Github app for you phone, an authenticator app or a passkey all work) and save your recovery codes somewhere safe.
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR61Hxjye2Jsd4Zb705FiDmJkUw5EyF1tI-8Km8FBhdg&s){alt="GitHub icon" width="180px"}
+
+## Step 2: Install R (5-10 minutes)
+
+R is the programming language we will use.
+
+1. Go to [cran.r-project.org](https://cran.r-project.org)
+2. Click the link for your system (**Windows** or **macOS**)
+3. Windows: choose **base**, then "Download R for Windows". macOS: pick the installer that matches your Mac (**Apple silicon** for M1 and newer, **Intel** otherwise)
+4. Open the downloaded file and accept the default options
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-L7DkAG3qhcWs-DKA2fQqWipducStkRB4qRec8URyIg&s){alt="R software icon"  width="100px"}
+
+::: {.callout-tip}
+## Not sure which Mac you have?
+Click the Apple menu, then **About This Mac**. If it says "Chip: Apple M…" choose Apple silicon. If it says "Processor: Intel", choose Intel.
+:::
+
+If you already have R, please make sure it is a **recent version** (the one listed at the top of the CRAN page, or close to it).
+
+## Step 3: Install RStudio or Positron (5 minutes)
+
+This is the program where you will write and run your R code. **Install R first**, then one of these:
+
+- [RStudio Desktop](https://posit.co/download/rstudio-desktop/) (choose this if you are unsure)
+- [Positron](https://positron.posit.co) (a newer option, which we will use for demonstration)
+
+Open it once to check it starts. You should see a window with a console where you can type R code.
+
+![](https://posit.co/sites/default/files/styles/x_small_hq/public/image/2026-04/rstudio-logo-fullcolor.png?itok=rTnxRh96){alt="RStudio icon" width="100px"}
+![](https://positron.posit.co/assets/images/positron-logo_fullcolor-TM.png){alt="Positron icon" width="200px"}
+
+
+## Step 4: Install Git (5 minutes) (Optional but recommended)
+
+Git is the tool that keeps the history of your files. GitHub Desktop has its own copy inside it, but R and RStudio need Git installed separately.
+
+**If you install GitHub Desktop (step 5) it comes with a version of Git**, so you can skip this step. However, it will mean that all Git use will need to be through GitHub Desktop. *This is almost always adequate.*
+
+![](images/Git-Logo-Black.svg){alt="git icon" width="130px"}
+
+::: {.panel-tabset}
+
+## Windows
+
+1. Download from [git-scm.com/downloads](https://git-scm.com/downloads)
+2. Run the installer and click **Next** through the questions. The defaults are fine
+
+## macOS
+
+1. Open the **Terminal** app (press Cmd + Space and type "Terminal")
+2. Type `git --version` and press Enter
+3. If Git is missing, your Mac will offer to install the "command line developer tools". Click **Install** and wait for it to finish
+
+:::
+
+## Step 5: Install GitHub Desktop and shake hands with GitHub (5-10 minutes)
+
+GitHub Desktop is a friendly app for saving and sharing your work. This step also introduces your laptop to your GitHub account, and you only need to do it once.
+
+![](https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/1280px-Github-desktop-logo-symbol.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail){alt="GitHub Desktop icon" width="100px"}
+
+```{=html}
+<svg viewBox="0 0 800 250" role="img" aria-label="Your laptop, with GitHub Desktop and RStudio, connected by a two-way arrow to your GitHub account" style="width:100%;max-width:800px;color:inherit">
+<defs><marker id="ar" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e07a1f"/></marker></defs>
+<g font-family="Helvetica, Arial, sans-serif" text-anchor="middle" fill="currentColor">
+<rect x="30" y="30" width="330" height="170" rx="16" fill="currentColor" fill-opacity=".06" stroke="currentColor" stroke-width="3"/>
+<text x="195" y="62" font-size="20" font-weight="700">Your laptop</text>
+<rect x="55" y="85" width="135" height="60" rx="10" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="2"/><text x="122" y="112" font-size="16">GitHub</text><text x="122" y="132" font-size="16">Desktop</text>
+<rect x="205" y="85" width="135" height="60" rx="10" fill="#2f6fb0" fill-opacity=".25" stroke="#2f6fb0" stroke-width="2"/><text x="272" y="121" font-size="16">RStudio</text>
+<text x="195" y="178" font-size="15">name + email on every commit</text>
+<line x1="372" y1="115" x2="520" y2="115" stroke="#e07a1f" stroke-width="4" marker-start="url(#ar)" marker-end="url(#ar)"/>
+<text x="446" y="98" font-size="17" font-weight="700">The handshake</text>
+<text x="446" y="140" font-size="15">sign in + authorise</text>
+<rect x="535" y="55" width="235" height="120" rx="60" fill="#2f9e6a" fill-opacity=".25" stroke="#2f9e6a" stroke-width="3"/>
+<text x="652" y="108" font-size="22" font-weight="700">GitHub</text><text x="652" y="136" font-size="16">your account</text>
+</g></svg>
+```
+
+**Install it**
+
+1. Download [GitHub Desktop](https://desktop.github.com) and run the installer
+
+**Sign in (the handshake)**
+
+2. Open GitHub Desktop and click **Sign in to GitHub.com**
+3. Your web browser opens. Sign in to GitHub and click **Authorize**
+4. Your browser sends you back to GitHub Desktop, which now shows your username
+
+<!-- Optional: add a screenshot of the GitHub Desktop sign-in screen here -->
+
+**Tell Git who you are**
+
+5. Open the settings: on **Windows**, **File > Options**. On **macOS**, **GitHub Desktop > Settings**
+6. Go to the **Git** tab and enter your **name** and your **email**. Use the same email as your GitHub account
+
+::: {.callout-note}
+## About email privacy
+Your email is attached to the changes you save. If you would rather keep it private, the Git tab lets you choose your GitHub "noreply" address instead. Either is fine for the workshop.
+:::
+
+## Step 6: Install the R packages (5-10 minutes)
+
+Packages are add-ons that give R extra abilities. Open RStudio (or Positron), click in the **Console**, paste the code below and press Enter.
+
+```r
+pkgs <- c("usethis", "here", "ggplot2", 
+          "quarto", "rmarkdown", "knitr")
+
+install.packages(pkgs)
+```
+
+Lots of text will scroll past, which is normal. A few tips:
+
+- It can take several minutes. Wait for the `>` prompt to come back
+- If asked **"Do you want to install from sources?"**, type `No` and press Enter
+- If asked to **restart R**, say **Yes**
+
+![](https://usethis.r-lib.org/logo.png){alt="usethis hexsticker" width="80px"}
+![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/ggplot2.png){alt="ggplot2 hexsticker" width="80px"}
+![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/quarto.png){alt="quarto hexsticker" width="80px"}
+![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/rmarkdown.png){alt="rmarkdown hexsticker" width="80px"}
+![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/knitr.png){alt="knitr hexsticker" width="80px"}
+
+## Step 7: Install TinyTeX for PDF articles (5-10 minutes)
+
+Journal articles are usually turned into a PDF, and for that Quarto needs a behind-the-scenes tool called LaTeX. **TinyTeX** is a small, friendly version of it. You only install it once and never need to open it yourself.
+
+In the RStudio (or Positron) **Console**, paste:
+
+```r
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+
+It downloads a few hundred megabytes, so give it a few minutes and wait for the `>` prompt to come back. If you are asked to restart R, say **Yes**.
+
+**Quick test.** Create a new Quarto document (**File > New File > Quarto Document**), replace everything in it with the text below, save it, and click **Render**:
+
+
+```{r eval=FALSE}
+---
+title: "Test"
+format: pdf
+---
+
+Hello, PDF!
+```
+
+A PDF with "Hello, PDF!" means you are ready. The **first** render can take a few minutes while LaTeX fetches a few extras, so please be patient. After that it is much faster.
+
+::: {.callout-note}
+## Already have LaTeX?
+If you already use MacTeX, MiKTeX or TeX Live, you can skip this step, as long as the test above works.
+:::
+
+## Step 8: Final check (2 minutes)
+
+Paste this into the Console. It tells you whether everything is ready.
+
+```r
+# 1. Are all the packages installed? We want to see: character(0)
+setdiff(pkgs, rownames(installed.packages()))
+
+# 2. Does Git know who you are? We want to see your name and email
+usethis::git_sitrep()
+
+# 3. Is Quarto available? We want to see a file path
+quarto::quarto_path()
+```
+
+::: {.callout-important}
+## What a good result looks like
+1. `character(0)` means every package is installed
+2. `usethis::git_sitrep()` lists your name and email
+3. A file path means Quarto was found. If you see `NULL`, install it from [quarto.org/docs/get-started](https://quarto.org/docs/get-started/)
+:::
+
+**If all three look right, you are ready.** 🎉 Take a screenshot if you like, and see you at the workshop!
+
+## Optional: connect R to GitHub as well
+
+We will mostly use GitHub Desktop, so this is not required. If you would like to push to GitHub directly from R, you can also create a **personal access token** (a password-like code for R):
+
+```r
+usethis::create_github_token()   # opens GitHub in your browser, click "Generate token"
+gitcreds::gitcreds_set()         # paste the token when asked
+```
+
+## Troubleshooting
+
+| Problem | Try this |
+|---------|----------|
+| I cannot install software on my work laptop | Ask your IT team for help, or tell us and we will find a workaround |
+| An R package fails to install | Copy the red error message and send it to us |
+| GitHub Desktop will not sign me in | Check you verified your email, then try the sign-in again |
+| I do not know which version of anything I have | That is fine. Tell us what you have and we will check |
+
+We are looking forward to meeting you. See you soon!

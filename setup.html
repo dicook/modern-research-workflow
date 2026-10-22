@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Before you arrive: getting set up</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="setup_files/libs/clipboard/clipboard.min.js"></script>
+<script src="setup_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="setup_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="setup_files/libs/quarto-html/popper.min.js"></script>
+<script src="setup_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="setup_files/libs/quarto-html/anchor.min.js"></script>
+<link href="setup_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="setup_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="setup_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="setup_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="setup_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Steps</h2>
+   
+  <ul>
+  <li><a href="#step-1-create-a-github-account-5-minutes" id="toc-step-1-create-a-github-account-5-minutes" class="nav-link active" data-scroll-target="#step-1-create-a-github-account-5-minutes">Step 1: Create a GitHub account (5 minutes)</a></li>
+  <li><a href="#step-2-install-r-5-10-minutes" id="toc-step-2-install-r-5-10-minutes" class="nav-link" data-scroll-target="#step-2-install-r-5-10-minutes">Step 2: Install R (5-10 minutes)</a></li>
+  <li><a href="#step-3-install-rstudio-or-positron-5-minutes" id="toc-step-3-install-rstudio-or-positron-5-minutes" class="nav-link" data-scroll-target="#step-3-install-rstudio-or-positron-5-minutes">Step 3: Install RStudio or Positron (5 minutes)</a></li>
+  <li><a href="#step-4-install-git-5-minutes-optional-but-recommended" id="toc-step-4-install-git-5-minutes-optional-but-recommended" class="nav-link" data-scroll-target="#step-4-install-git-5-minutes-optional-but-recommended">Step 4: Install Git (5 minutes) (Optional but recommended)</a></li>
+  <li><a href="#step-5-install-github-desktop-and-shake-hands-with-github-5-10-minutes" id="toc-step-5-install-github-desktop-and-shake-hands-with-github-5-10-minutes" class="nav-link" data-scroll-target="#step-5-install-github-desktop-and-shake-hands-with-github-5-10-minutes">Step 5: Install GitHub Desktop and shake hands with GitHub (5-10 minutes)</a></li>
+  <li><a href="#step-6-install-the-r-packages-5-10-minutes" id="toc-step-6-install-the-r-packages-5-10-minutes" class="nav-link" data-scroll-target="#step-6-install-the-r-packages-5-10-minutes">Step 6: Install the R packages (5-10 minutes)</a></li>
+  <li><a href="#step-7-install-tinytex-for-pdf-articles-5-10-minutes" id="toc-step-7-install-tinytex-for-pdf-articles-5-10-minutes" class="nav-link" data-scroll-target="#step-7-install-tinytex-for-pdf-articles-5-10-minutes">Step 7: Install TinyTeX for PDF articles (5-10 minutes)</a></li>
+  <li><a href="#step-8-final-check-2-minutes" id="toc-step-8-final-check-2-minutes" class="nav-link" data-scroll-target="#step-8-final-check-2-minutes">Step 8: Final check (2 minutes)</a></li>
+  <li><a href="#optional-connect-r-to-github-as-well" id="toc-optional-connect-r-to-github-as-well" class="nav-link" data-scroll-target="#optional-connect-r-to-github-as-well">Optional: connect R to GitHub as well</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Before you arrive: getting set up</h1>
+<p class="subtitle lead">A Modern Research Workflow with R and GitHub</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Welcome, and thank you for joining us. <span style="font-size: 1.8em;"> 🫶 </span></p>
+<p>To make the most of our time together, we ask you to set up your laptop <strong>before the workshop</strong>. It takes about <strong>40 minutes</strong> and you only do it once. Nothing here is hard: it is mostly downloading, clicking “Next”, and signing in.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Stuck? You are not alone
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Software installs can be fiddly, and that is completely normal. If any step does not work, <strong>stop, make a note of what happened, and seek help</strong>. The 30 minutes prior to the workshop are set aside for setup help. You can also email the organisers with a screenshot of the problem that you are encountering, in the day prior to the workshop.</p>
+</div>
+</div>
+<svg viewbox="0 0 800 150" role="img" aria-label="Seven steps: Account, R, RStudio, Git, GitHub Desktop, Packages, Check" style="width:100%;max-width:800px;color:inherit">
+<line x1="60" y1="50" x2="720" y2="50" stroke="currentColor" stroke-opacity=".3" stroke-width="3"></line>
+<g font-family="Helvetica, Arial, sans-serif" text-anchor="middle" fill="currentColor">
+<g font-size="22" font-weight="700">
+<circle cx="60" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"></circle><text x="60" y="58">1</text>
+<circle cx="170" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"></circle><text x="170" y="58">2</text>
+<circle cx="280" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"></circle><text x="280" y="58">3</text>
+<circle cx="390" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"></circle><text x="390" y="58">4</text>
+<circle cx="500" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"></circle><text x="500" y="58">5</text>
+<circle cx="610" cy="50" r="28" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="3"></circle><text x="610" y="58">6</text>
+<circle cx="720" cy="50" r="28" fill="#2f9e6a" fill-opacity=".3" stroke="#2f9e6a" stroke-width="3"></circle><text x="720" y="58">✓</text>
+</g>
+<g font-size="17">
+<text x="60" y="108">GitHub</text><text x="60" y="130">account</text>
+<text x="170" y="108">R</text>
+<text x="280" y="108">RStudio</text>
+<text x="390" y="108">Git</text>
+<text x="500" y="108">GitHub</text><text x="500" y="130">Desktop</text>
+<text x="610" y="108">R</text><text x="610" y="130">packages</text>
+<text x="720" y="108">Final</text><text x="720" y="130">check</text>
+</g></g></svg>
+<section id="step-1-create-a-github-account-5-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-create-a-github-account-5-minutes">Step 1: Create a GitHub account (5 minutes)</h2>
+<p>GitHub is the website where we will store and share our projects.</p>
+<ol type="1">
+<li>Go to <a href="https://github.com/signup">github.com/signup</a></li>
+<li>Enter your email, choose a password and a <strong>username</strong></li>
+<li>Check your inbox and <strong>verify your email address</strong></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Choosing a username
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pick something you will be happy to put on a CV or paper for years, such as <code>firstname-lastname</code>. <strong>Already have an account?</strong> <em>Brilliant, you can skip ahead 🏃🏾‍♀️‍➡️ and just make sure you can sign in.</em></p>
+</div>
+</div>
+<p>GitHub may ask you to set up <strong>two-factor authentication</strong>. Follow the prompts (the Github app for you phone, an authenticator app or a passkey all work) and save your recovery codes somewhere safe.</p>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR61Hxjye2Jsd4Zb705FiDmJkUw5EyF1tI-8Km8FBhdg&amp;s.png" class="img-fluid" alt="GitHub icon" width="180"></p>
+</section>
+<section id="step-2-install-r-5-10-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-install-r-5-10-minutes">Step 2: Install R (5-10 minutes)</h2>
+<p>R is the programming language we will use.</p>
+<ol type="1">
+<li>Go to <a href="https://cran.r-project.org">cran.r-project.org</a></li>
+<li>Click the link for your system (<strong>Windows</strong> or <strong>macOS</strong>)</li>
+<li>Windows: choose <strong>base</strong>, then “Download R for Windows”. macOS: pick the installer that matches your Mac (<strong>Apple silicon</strong> for M1 and newer, <strong>Intel</strong> otherwise)</li>
+<li>Open the downloaded file and accept the default options</li>
+</ol>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-L7DkAG3qhcWs-DKA2fQqWipducStkRB4qRec8URyIg&amp;s.png" class="img-fluid" alt="R software icon" width="100"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Not sure which Mac you have?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Click the Apple menu, then <strong>About This Mac</strong>. If it says “Chip: Apple M…” choose Apple silicon. If it says “Processor: Intel”, choose Intel.</p>
+</div>
+</div>
+<p>If you already have R, please make sure it is a <strong>recent version</strong> (the one listed at the top of the CRAN page, or close to it).</p>
+</section>
+<section id="step-3-install-rstudio-or-positron-5-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-install-rstudio-or-positron-5-minutes">Step 3: Install RStudio or Positron (5 minutes)</h2>
+<p>This is the program where you will write and run your R code. <strong>Install R first</strong>, then one of these:</p>
+<ul>
+<li><a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a> (choose this if you are unsure)</li>
+<li><a href="https://positron.posit.co">Positron</a> (a newer option, which we will use for demonstration)</li>
+</ul>
+<p>Open it once to check it starts. You should see a window with a console where you can type R code.</p>
+<p><img src="https://posit.co/sites/default/files/styles/x_small_hq/public/image/2026-04/rstudio-logo-fullcolor.png?itok=rTnxRh96" class="img-fluid" alt="RStudio icon" width="100"> <img src="https://positron.posit.co/assets/images/positron-logo_fullcolor-TM.png" class="img-fluid" alt="Positron icon" width="200"></p>
+</section>
+<section id="step-4-install-git-5-minutes-optional-but-recommended" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-install-git-5-minutes-optional-but-recommended">Step 4: Install Git (5 minutes) (Optional but recommended)</h2>
+<p>Git is the tool that keeps the history of your files. GitHub Desktop has its own copy inside it, but R and RStudio need Git installed separately.</p>
+<p><strong>If you install GitHub Desktop (step 5) it comes with a version of Git</strong>, so you can skip this step. However, it will mean that all Git use will need to be through GitHub Desktop. <em>This is almost always adequate.</em></p>
+<p><img src="images/Git-Logo-Black.svg" class="img-fluid" alt="git icon" width="130"></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">macOS</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<ol type="1">
+<li>Download from <a href="https://git-scm.com/downloads">git-scm.com/downloads</a></li>
+<li>Run the installer and click <strong>Next</strong> through the questions. The defaults are fine</li>
+</ol>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li>Open the <strong>Terminal</strong> app (press Cmd + Space and type “Terminal”)</li>
+<li>Type <code>git --version</code> and press Enter</li>
+<li>If Git is missing, your Mac will offer to install the “command line developer tools”. Click <strong>Install</strong> and wait for it to finish</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-install-github-desktop-and-shake-hands-with-github-5-10-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-install-github-desktop-and-shake-hands-with-github-5-10-minutes">Step 5: Install GitHub Desktop and shake hands with GitHub (5-10 minutes)</h2>
+<p>GitHub Desktop is a friendly app for saving and sharing your work. This step also introduces your laptop to your GitHub account, and you only need to do it once.</p>
+<p><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/1280px-Github-desktop-logo-symbol.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail" class="img-fluid" alt="GitHub Desktop icon" width="100"></p>
+<svg viewbox="0 0 800 250" role="img" aria-label="Your laptop, with GitHub Desktop and RStudio, connected by a two-way arrow to your GitHub account" style="width:100%;max-width:800px;color:inherit">
+<defs><marker id="ar" markerwidth="10" markerheight="10" refx="5" refy="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e07a1f"></path></marker></defs>
+<g font-family="Helvetica, Arial, sans-serif" text-anchor="middle" fill="currentColor">
+<rect x="30" y="30" width="330" height="170" rx="16" fill="currentColor" fill-opacity=".06" stroke="currentColor" stroke-width="3"></rect>
+<text x="195" y="62" font-size="20" font-weight="700">Your laptop</text>
+<rect x="55" y="85" width="135" height="60" rx="10" fill="#e07a1f" fill-opacity=".25" stroke="#e07a1f" stroke-width="2"></rect><text x="122" y="112" font-size="16">GitHub</text><text x="122" y="132" font-size="16">Desktop</text>
+<rect x="205" y="85" width="135" height="60" rx="10" fill="#2f6fb0" fill-opacity=".25" stroke="#2f6fb0" stroke-width="2"></rect><text x="272" y="121" font-size="16">RStudio</text>
+<text x="195" y="178" font-size="15">name + email on every commit</text>
+<line x1="372" y1="115" x2="520" y2="115" stroke="#e07a1f" stroke-width="4" marker-start="url(#ar)" marker-end="url(#ar)"></line>
+<text x="446" y="98" font-size="17" font-weight="700">The handshake</text>
+<text x="446" y="140" font-size="15">sign in + authorise</text>
+<rect x="535" y="55" width="235" height="120" rx="60" fill="#2f9e6a" fill-opacity=".25" stroke="#2f9e6a" stroke-width="3"></rect>
+<text x="652" y="108" font-size="22" font-weight="700">GitHub</text><text x="652" y="136" font-size="16">your account</text>
+</g></svg>
+<p><strong>Install it</strong></p>
+<ol type="1">
+<li>Download <a href="https://desktop.github.com">GitHub Desktop</a> and run the installer</li>
+</ol>
+<p><strong>Sign in (the handshake)</strong></p>
+<ol start="2" type="1">
+<li>Open GitHub Desktop and click <strong>Sign in to GitHub.com</strong></li>
+<li>Your web browser opens. Sign in to GitHub and click <strong>Authorize</strong></li>
+<li>Your browser sends you back to GitHub Desktop, which now shows your username</li>
+</ol>
+<!-- Optional: add a screenshot of the GitHub Desktop sign-in screen here -->
+<p><strong>Tell Git who you are</strong></p>
+<ol start="5" type="1">
+<li>Open the settings: on <strong>Windows</strong>, <strong>File &gt; Options</strong>. On <strong>macOS</strong>, <strong>GitHub Desktop &gt; Settings</strong></li>
+<li>Go to the <strong>Git</strong> tab and enter your <strong>name</strong> and your <strong>email</strong>. Use the same email as your GitHub account</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>About email privacy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your email is attached to the changes you save. If you would rather keep it private, the Git tab lets you choose your GitHub “noreply” address instead. Either is fine for the workshop.</p>
+</div>
+</div>
+</section>
+<section id="step-6-install-the-r-packages-5-10-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-install-the-r-packages-5-10-minutes">Step 6: Install the R packages (5-10 minutes)</h2>
+<p>Packages are add-ons that give R extra abilities. Open RStudio (or Positron), click in the <strong>Console</strong>, paste the code below and press Enter.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"usethis"</span>, <span class="st">"here"</span>, <span class="st">"ggplot2"</span>, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"quarto"</span>, <span class="st">"rmarkdown"</span>, <span class="st">"knitr"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Lots of text will scroll past, which is normal. A few tips:</p>
+<ul>
+<li>It can take several minutes. Wait for the <code>&gt;</code> prompt to come back</li>
+<li>If asked <strong>“Do you want to install from sources?”</strong>, type <code>No</code> and press Enter</li>
+<li>If asked to <strong>restart R</strong>, say <strong>Yes</strong></li>
+</ul>
+<p><img src="https://usethis.r-lib.org/logo.png" class="img-fluid" alt="usethis hexsticker" width="80"> <img src="https://github.com/rstudio/hex-stickers/raw/main/thumbs/ggplot2.png" class="img-fluid" alt="ggplot2 hexsticker" width="80"> <img src="https://github.com/rstudio/hex-stickers/raw/main/thumbs/quarto.png" class="img-fluid" alt="quarto hexsticker" width="80"> <img src="https://github.com/rstudio/hex-stickers/raw/main/thumbs/rmarkdown.png" class="img-fluid" alt="rmarkdown hexsticker" width="80"> <img src="https://github.com/rstudio/hex-stickers/raw/main/thumbs/knitr.png" class="img-fluid" alt="knitr hexsticker" width="80"></p>
+</section>
+<section id="step-7-install-tinytex-for-pdf-articles-5-10-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-install-tinytex-for-pdf-articles-5-10-minutes">Step 7: Install TinyTeX for PDF articles (5-10 minutes)</h2>
+<p>Journal articles are usually turned into a PDF, and for that Quarto needs a behind-the-scenes tool called LaTeX. <strong>TinyTeX</strong> is a small, friendly version of it. You only install it once and never need to open it yourself.</p>
+<p>In the RStudio (or Positron) <strong>Console</strong>, paste:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tinytex"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>It downloads a few hundred megabytes, so give it a few minutes and wait for the <code>&gt;</code> prompt to come back. If you are asked to restart R, say <strong>Yes</strong>.</p>
+<p><strong>Quick test.</strong> Create a new Quarto document (<strong>File &gt; New File &gt; Quarto Document</strong>), replace everything in it with the text below, save it, and click <strong>Render</strong>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Test"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> pdf</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Hello, PDF<span class="sc">!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>A PDF with “Hello, PDF!” means you are ready. The <strong>first</strong> render can take a few minutes while LaTeX fetches a few extras, so please be patient. After that it is much faster.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Already have LaTeX?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you already use MacTeX, MiKTeX or TeX Live, you can skip this step, as long as the test above works.</p>
+</div>
+</div>
+</section>
+<section id="step-8-final-check-2-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-final-check-2-minutes">Step 8: Final check (2 minutes)</h2>
+<p>Paste this into the Console. It tells you whether everything is ready.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Are all the packages installed? We want to see: character(0)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setdiff</span>(pkgs, <span class="fu">rownames</span>(<span class="fu">installed.packages</span>()))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Does Git know who you are? We want to see your name and email</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Is Quarto available? We want to see a file path</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>quarto<span class="sc">::</span><span class="fu">quarto_path</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>What a good result looks like
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><code>character(0)</code> means every package is installed</li>
+<li><code>usethis::git_sitrep()</code> lists your name and email</li>
+<li>A file path means Quarto was found. If you see <code>NULL</code>, install it from <a href="https://quarto.org/docs/get-started/">quarto.org/docs/get-started</a></li>
+</ol>
+</div>
+</div>
+<p><strong>If all three look right, you are ready.</strong> 🎉 Take a screenshot if you like, and see you at the workshop!</p>
+</section>
+<section id="optional-connect-r-to-github-as-well" class="level2">
+<h2 class="anchored" data-anchor-id="optional-connect-r-to-github-as-well">Optional: connect R to GitHub as well</h2>
+<p>We will mostly use GitHub Desktop, so this is not required. If you would like to push to GitHub directly from R, you can also create a <strong>personal access token</strong> (a password-like code for R):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()   <span class="co"># opens GitHub in your browser, click "Generate token"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()         <span class="co"># paste the token when asked</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Try this</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>I cannot install software on my work laptop</td>
+<td>Ask your IT team for help, or tell us and we will find a workaround</td>
+</tr>
+<tr class="even">
+<td>An R package fails to install</td>
+<td>Copy the red error message and send it to us</td>
+</tr>
+<tr class="odd">
+<td>GitHub Desktop will not sign me in</td>
+<td>Check you verified your email, then try the sign-in again</td>
+</tr>
+<tr class="even">
+<td>I do not know which version of anything I have</td>
+<td>That is fine. Tell us what you have and we will check</td>
+</tr>
+</tbody>
+</table>
+<p>We are looking forward to meeting you. See you soon!</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
