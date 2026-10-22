@@ -253,4 +253,6 @@ gitcreds::gitcreds_set()         # paste the token when asked
 | GitHub Desktop will not sign me in | Check you verified your email, then try the sign-in again |
 | I do not know which version of anything I have | That is fine. Tell us what you have and we will check |
 
-We are looking forward to meeting you. See you soon!
+Materials for the workshop are at [https://dicook.github.io/modern-research-workflow/](https://dicook.github.io/modern-research-workflow/).
+
+We are looking forward to meeting you. See you soon! 👋🏾
