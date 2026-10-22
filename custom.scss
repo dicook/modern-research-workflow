@@ -61,6 +61,17 @@ li {
   content: "✏️ ";
 }
 
+// Uses the `bounce` keyframes from animate.css (loaded by the more-fragments extension)
+.hover-bounce {
+  display: inline-block;
+  cursor: default;
+  transform-origin: center bottom;
+}
+
+.hover-bounce:hover {
+  animation: bounce 1s;
+}
+
 .code_block_short {
   height: 200px;
   border: 1px;
