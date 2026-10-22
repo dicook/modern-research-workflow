@@ -1,0 +1,195 @@
+---
+title: "A Modern Research Workflow with R and GitHub"
+subtitle: "A hands-on workshop for early-career researchers who use R"
+author: "Di Cook, Monash University"
+format:
+  html:
+    theme: [cosmo, index.scss]
+    toc: false
+    page-layout: article
+    title-block-banner: true
+    smooth-scroll: true
+---
+
+<a class="repo-link" href="https://github.com/dicook/modern-research-workflow" target="_blank" rel="noopener"><i class="bi bi-github"></i> Link to the main GitHib repo: dicook/modern-research-workflow</a>
+
+::: {.lead}
+This workshop is for early-career researchers, academics and students (honours, masters and PhD) who already use R for analysis and want their work to be easier to share, check and build on.
+:::
+
+::: {.setup-box}
+### <i class="bi bi-laptop"></i> Before you arrive
+
+To make the most of our time together, we ask you to set up your laptop **before the workshop**. Allow around 40 minutes for the setup, so you’ll be ready to follow along from the start.
+
+<a class="btn btn-primary btn-lg" href="setup.html" target="_blank" rel="noopener">Setup instructions <i class="bi bi-arrow-right"></i></a>
+:::
+
+## Who is this for?
+
+::: {.audience-grid}
+
+::: {.audience-card}
+<i class="bi bi-github"></i>
+
+You have written some R code but have used GitHub rarely or not at all
+:::
+
+::: {.audience-card}
+<i class="bi bi-journal-text"></i>
+
+You are preparing your first papers, thesis or software and want good habits from the start
+:::
+
+::: {.audience-card}
+<i class="bi bi-robot"></i>
+
+You are curious about using AI tools responsibly in research
+:::
+
+::: {.audience-card}
+<i class="bi bi-people"></i>
+
+You collaborate with others, or expect to, and want a smoother way to work together
+:::
+
+:::
+
+You don't need any experience with version control, package development or Quarto. You should be comfortable running R code and reading a data frame. Researchers from any discipline are welcome; the examples are chosen to make sense across fields.
+
+## Programme
+
+::: {.schedule}
+
+::: {.slot}
+[0:00 – 0:15]{.time}
+
+::: {.slot-body}
+#### Welcome and overview
+:::
+:::
+
+::: {.slot}
+[0:15 – 0:55]{.time}
+
+::: {.slot-body}
+#### Reproducibility and collaboration with GitHub
+
+- Structuring a research project: folders, naming, README, relative paths
+- Git basics: commit, push, pull, and recovering from mistakes using history
+- Pull requests and issues, and working with co-authors
+
+[**Activity:** make a project shared with a partner, make some changes, commit to it, merge commits, and open an issue describing next steps]{.activity}
+:::
+:::
+
+::: {.slot .break}
+[0:55 – 1:00]{.time}
+
+::: {.slot-body}
+Break
+:::
+:::
+
+::: {.slot}
+[1:00 – 1:55]{.time}
+
+::: {.slot-body}
+#### Publications and software
+
+- Writing with Quarto: papers and slides from one source
+- Citations, journal templates and linking results directly to code
+- Sharing research code: packaging basics, licences, Zenodo DOIs and citation files
+
+[**Activity:** render a short Quarto document with a figure and a citation]{.activity}
+:::
+:::
+
+::: {.slot .break}
+[1:55 – 2:00]{.time}
+
+::: {.slot-body}
+Break
+:::
+:::
+
+::: {.slot}
+[2:00 – 2:30]{.time}
+
+::: {.slot-body}
+#### AI in the research workflow
+
+- Useful applications: code help, debugging, documentation
+- Risks: hallucinated code and references, privacy, and disclosure norms
+
+[**Activity:** use an AI assistant to debug and document a function, then check the result]{.activity}
+:::
+:::
+
+::: {.slot}
+[2:30 – 3:00]{.time}
+
+::: {.slot-body}
+#### Data visualisation
+
+- Making figures reproducible and publication-ready
+
+[**Activity:** improve a poor chart, then script it so it regenerates from the data]{.activity}
+:::
+:::
+
+::: {.slot}
+[3:00 – 3:15]{.time}
+
+::: {.slot-body}
+#### Wrap-up
+:::
+:::
+
+:::
+
+## Materials
+
+::: {.materials-grid}
+
+::: {.material-card .soon}
+<i class="bi bi-easel"></i>
+
+**Session 1 slides**
+
+[Coming soon]{.badge .text-bg-secondary}
+:::
+
+::: {.material-card .soon}
+<i class="bi bi-easel"></i>
+
+**Session 2 slides**
+
+[Coming soon]{.badge .text-bg-secondary}
+:::
+
+::: {.material-card .soon}
+<i class="bi bi-file-earmark-zip"></i>
+
+**Zip file of materials**
+
+[Coming soon]{.badge .text-bg-secondary}
+:::
+
+:::
+
+<!-- When ready, replace a card's contents with a link, e.g.
+[**Session 1 slides**](slides1.html){.stretched-link}
+and remove the `.soon` class and badge. -->
+
+## Presenter
+
+::: {.presenter}
+**Di Cook** is Professor of Statistics at Monash University in Melbourne, Australia. Her research focuses on data visualisation, especially of high-dimensional data. She is an advocate of open source software and has practised reproducible research methods for almost two decades. Di is a Fellow of the American Statistical Association, a past editor of both the *Journal of Computational and Graphical Statistics* and *The R Journal*, an elected Ordinary Member of the R Foundation, and an elected member of the International Statistical Institute. She enjoys helping early-career researchers build habits that make their work easier to share, check and build on.
+:::
+
+::: {.site-footer}
+[![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+© Dianne Cook, 2026. These materials are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). Source on [GitHub](https://github.com/dicook/modern-research-workflow).
+:::

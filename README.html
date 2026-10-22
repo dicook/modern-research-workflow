@@ -50,71 +50,47 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="a-modern-research-workflow-with-r-and-github" class="level2">
-<h2 class="anchored" data-anchor-id="a-modern-research-workflow-with-r-and-github">A Modern Research Workflow with R and GitHub</h2>
-<p>Website: <a href="https://dicook.github.io/modern-research-workflow/">https://dicook.github.io/modern-research-workflow</a></p>
-<p>This workshop is for early-career researchers, academics and students (honours, masters and PhD) who already use R for analysis and want to make their work easier to share, check and build on.</p>
-<p>It suits people who:</p>
-<ul>
-<li>have written some R code but haven’t used GitHub, or have used it only occasionally</li>
-<li>are preparing their first papers, theses or software and want good habits from the start</li>
-<li>are curious about using AI tools responsibly in research</li>
-<li>collaborate with others, or expect to, and want a smoother way to work together</li>
-</ul>
-<p>No expertise in version control, package development or Quarto is needed. You should be comfortable running R code and reading a data frame. Researchers from any discipline are welcome, as the examples are chosen to be accessible across fields.</p>
-<p><strong>Before you arrive please follow these</strong> <a href="https://dicook.github.io/modern-research-workflow/setup.html" target="_blank" rel="noopener"> <strong>setup instructions </strong></a>. It will take about 40 minutes to complete, and then you will be fully ready to follow along with the workshop.</p>
-<p><strong>Presenter</strong>: Di Cook is Professor of Statistics at Monash University in Melbourne, Australia. Her research focuses on data visualisation, especially of high-dimensional data. She is an advocate of open source software and has practised reproducible research methods for almost two decades. Di is a Fellow of the American Statistical Association, a past editor of both the Journal of Computational and Graphical Statistics and the R Journal, an elected Ordinary Member of the R Foundation, and an elected member of the International Statistical Institute. She enjoys helping early-career researchers build habits that make their work easier to share, check and build on.</p>
+<section id="a-modern-research-workflow-with-r-and-github" class="level1">
+<h1>A Modern Research Workflow with R and GitHub</h1>
+<p>A hands-on workshop by Di Cook (Monash University) for early-career researchers who use R and want their work to be easier to share, check and build on. It covers GitHub, Quarto, AI tools and data visualisation.</p>
+<p><strong>Workshop website: <a href="https://dicook.github.io/modern-research-workflow/" class="uri">https://dicook.github.io/modern-research-workflow/</a></strong></p>
+<p>The website has the audience, programme, materials and presenter details. Before the workshop, please complete the <a href="https://dicook.github.io/modern-research-workflow/setup.html">setup instructions</a> (about 40 minutes).</p>
+<section id="repository-contents" class="level2">
+<h2 class="anchored" data-anchor-id="repository-contents">Repository contents</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>index.qmd</code>, <code>index.scss</code></td>
+<td>Workshop home page and its styling</td>
+</tr>
+<tr class="even">
+<td><code>setup.qmd</code></td>
+<td>Setup instructions for participants</td>
+</tr>
+<tr class="odd">
+<td><code>slides*.qmd</code></td>
+<td>Session slides</td>
+</tr>
+</tbody>
+</table>
+<p>Render with <code>quarto render &lt;file&gt;.qmd</code> and commit the resulting <code>.html</code> files and <code>*_files/</code> folders, which GitHub Pages serves directly.</p>
 </section>
-<section id="outline" class="level2">
-<h2 class="anchored" data-anchor-id="outline">Outline</h2>
-<ul>
-<li>0:00-0:15 Welcome and overview</li>
-<li>0:15-0:55 Reproducibility and collaboration with GitHub
-<ul>
-<li>Structuring a research project: folders, naming, README, relative paths</li>
-<li>Git basics: commit, push, pull, and recovering from mistakes using history</li>
-<li>Pull requests and issues, and working with co-authors</li>
-<li><em>Activity</em>: make a project shared with a partner, make some changes, commit to it, merge commits, make an issue detailing some next steps</li>
-</ul></li>
-<li>0:55-1:00 Break</li>
-<li>1:00-1:55 Publications and software
-<ul>
-<li>Writing with Quarto: papers and slides from one source</li>
-<li>Citations, journal templates and linking results directly to code</li>
-<li>Sharing research code: packaging basics, licences, Zenodo DOIs and citation files</li>
-<li><em>Activity</em>: render a short Quarto document with a figure and a citation</li>
-</ul></li>
-<li>1:55-2:00 Break</li>
-<li>2:00-2:30 AI in the research workflow
-<ul>
-<li>Useful applications: code help, debugging, documentation</li>
-<li>Risks: hallucinated code and references, privacy, and disclosure norms</li>
-<li><em>Activity</em>: use an AI assistant to debug and document a function, then check the result</li>
-</ul></li>
-<li>2:30-3:00 Data visualisation
-<ul>
-<li>Making figures reproducible and publication-ready</li>
-<li><em>Activity</em>: improve a poor chart, then script it so it regenerates from the data</li>
-</ul></li>
-<li>3:00-3:15 Wrap-up</li>
-</ul>
-</section>
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials</h2>
-<p><a href="https://dicook.github.io/modern-research-workflow/slides1.html">Session 1 Slides</a> NOT READY YET</p>
-<p><a href="https://dicook.github.io/modern-research-workflow/slides2.html">Session 2 Slides</a> NOT READY YET</p>
-<p><a href="https://dicook.github.io/modern-research-workflow/tutorial.zip">Zip file of materials</a> NOT READY YET</p>
-</section>
-<section id="copyright" class="level2">
-<h2 class="anchored" data-anchor-id="copyright">Copyright</h2>
-<p>Copyright: Dianne Cook, 2026</p>
-<p>These materials are licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<section id="licence" class="level2">
+<h2 class="anchored" data-anchor-id="licence">Licence</h2>
+<p>© Dianne Cook, 2026. These materials are licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" class="img-fluid figure-img"></a></p>
 <figcaption>CC BY-NC-SA 4.0</figcaption>
 </figure>
 </div>
+</section>
 </section>
 
 </main>

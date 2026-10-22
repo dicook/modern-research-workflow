@@ -1,0 +1,243 @@
+/*-- scss:defaults --*/
+$primary: #006dae;
+$accent: #e78c45;
+$font-size-base: 1.1rem;
+$headings-font-weight: 600;
+$link-color: $primary;
+
+/*-- scss:rules --*/
+.quarto-title-banner {
+  background: linear-gradient(135deg, #004a77 0%, $primary 60%, #2a8fcf 100%);
+  padding: 3.5rem 0 2.5rem;
+
+  .title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+  }
+}
+
+#title-block-header .quarto-title-meta-heading {
+  display: none;
+}
+
+h2 {
+  margin-top: 3rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid $accent;
+  display: inline-block;
+}
+
+.lead {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 1.5rem 0 2rem;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  color: #333;
+  font-size: 0.95rem;
+  text-decoration: none;
+
+  .bi {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background: #24292f;
+    border-color: #24292f;
+    color: #fff;
+  }
+}
+
+.setup-box {
+  background: rgba($accent, 0.12);
+  border-left: 6px solid $accent;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0 1rem;
+
+  h3 {
+    margin-top: 0;
+    color: darken($accent, 25%);
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+  }
+}
+
+// Card grids
+.audience-grid,
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.audience-card,
+.material-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  .bi {
+    font-size: 1.8rem;
+    color: $primary;
+  }
+
+  p {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.audience-grid {
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.audience-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+
+  p {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
+.material-card {
+  text-align: center;
+
+  &:hover:not(.soon) {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  &.soon {
+    opacity: 0.7;
+  }
+}
+
+// Schedule timeline
+.schedule {
+  margin-top: 1.25rem;
+  border-left: 3px solid rgba($primary, 0.25);
+  margin-left: 0.5rem;
+}
+
+.slot {
+  position: relative;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  padding: 0.75rem 0 0.75rem 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -0.6rem;
+    top: 1.05rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: $primary;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px $primary;
+  }
+
+  > p {
+    margin: 0;
+  }
+
+  .time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    color: $primary;
+    white-space: nowrap;
+  }
+
+  h4 {
+    margin: 0 0 0.4rem;
+    font-size: 1.2rem;
+  }
+
+  ul {
+    margin-bottom: 0.5rem;
+  }
+
+  &.break {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    &::before {
+      background: #fff;
+      box-shadow: 0 0 0 2px rgba($primary, 0.4);
+    }
+
+    .time,
+    .slot-body {
+      color: #888;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+}
+
+.activity {
+  display: block;
+  background: rgba($accent, 0.12);
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.95rem;
+
+  &::before {
+    content: "\F4CA"; // bootstrap icon: pencil
+    font-family: "bootstrap-icons";
+    margin-right: 0.4rem;
+    color: darken($accent, 15%);
+  }
+}
+
+@media (max-width: 576px) {
+  .slot {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+.presenter {
+  background: rgba($primary, 0.05);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.site-footer {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
