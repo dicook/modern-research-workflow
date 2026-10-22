@@ -72,6 +72,19 @@ li {
   animation: bounce 1s;
 }
 
+// Shrink a callout (and any code block inside it) to its content width
+// Quarto puts the class on a wrapper div around the callout
+.reveal .fit-content > .callout,
+.reveal .callout.fit-content {
+  width: fit-content;
+  max-width: 100%;
+
+  div.sourceCode,
+  pre {
+    width: fit-content;
+  }
+}
+
 .code_block_short {
   height: 200px;
   border: 1px;

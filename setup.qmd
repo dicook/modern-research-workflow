@@ -161,8 +161,10 @@ Your email is attached to the changes you save. If you would rather keep it priv
 Packages are add-ons that give R extra abilities. Open RStudio (or Positron), click in the **Console**, paste the code below and press Enter.
 
 ```r
-pkgs <- c("usethis", "here", "ggplot2", 
-          "quarto", "rmarkdown", "knitr", "fs")
+pkgs <- c("usethis", "here", 
+          "ggplot2", "readr", "tibble",
+          "quarto", "rmarkdown", "knitr", 
+          "fs")
 
 install.packages(pkgs)
 ```
@@ -175,6 +177,8 @@ Lots of text will scroll past, which is normal. A few tips:
 
 ![](https://usethis.r-lib.org/logo.png){alt="usethis hexsticker" width="80px"}
 ![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/ggplot2.png){alt="ggplot2 hexsticker" width="80px"}
+![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/readr.png){alt="ggplot2 hexsticker" width="80px"}
+![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/tibble.png){alt="ggplot2 hexsticker" width="80px"}
 ![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/quarto.png){alt="quarto hexsticker" width="80px"}
 ![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/rmarkdown.png){alt="rmarkdown hexsticker" width="80px"}
 ![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/knitr.png){alt="knitr hexsticker" width="80px"}
