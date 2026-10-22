@@ -13,7 +13,7 @@ It suits people who:
 
 No expertise in version control, package development or Quarto is needed. You should be comfortable running R code and reading a data frame. Researchers from any discipline are welcome, as the examples are chosen to be accessible across fields.
 
-**Before you arrive please follow these [setup instructions](setup.html).** It will take about 40 minutes to complete, and then you will be fully ready to follow along with the workshop.
+**Before you arrive please follow these [setup instructions](setup.html){target="_blank"}.** It will take about 40 minutes to complete, and then you will be fully ready to follow along with the workshop.
 
 **Presenter**: Di Cook is Professor of Statistics at Monash University in Melbourne, Australia. Her research focuses on data visualisation, especially of high-dimensional data. She is an advocate of open source software and has practised reproducible research methods for almost two decades. Di is a Fellow of the American Statistical Association, a past editor of both the Journal of Computational and Graphical Statistics and the R Journal, an elected Ordinary Member of the R Foundation, and an elected member of the International Statistical Institute. She enjoys helping early-career researchers build habits that make their work easier to share, check and build on.
 
