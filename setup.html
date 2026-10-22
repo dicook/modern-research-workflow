@@ -307,6 +307,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="step-7-install-tinytex-for-pdf-articles-5-10-minutes" class="level2">
 <h2 class="anchored" data-anchor-id="step-7-install-tinytex-for-pdf-articles-5-10-minutes">Step 7: Install TinyTeX for PDF articles (5-10 minutes)</h2>
 <p>Journal articles are usually turned into a PDF, and for that Quarto needs a behind-the-scenes tool called LaTeX. <strong>TinyTeX</strong> is a small, friendly version of it. You only install it once and never need to open it yourself.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Already have LaTeX?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you already use MacTeX, MiKTeX or TeX Live, you can skip this step, just check that the test below works.</p>
+</div>
+</div>
 <p>In the RStudio (or Positron) <strong>Console</strong>, paste:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tinytex"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -321,17 +334,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Hello, PDF<span class="sc">!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>A PDF with “Hello, PDF!” means you are ready. The <strong>first</strong> render can take a few minutes while LaTeX fetches a few extras, so please be patient. After that it is much faster.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Already have LaTeX?
+<span class="screen-reader-only">Warning</span>TinyTeX did not work? Try this instead
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you already use MacTeX, MiKTeX or TeX Live, you can skip this step, as long as the test above works.</p>
+<p>You only need <strong>one</strong> LaTeX installation. If TinyTeX failed, use the option for your computer below. Then restart RStudio (or Positron) and run the test document from the step above.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">macOS</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Install <strong>MiKTeX</strong>.</p>
+<ol type="1">
+<li>Download the installer from <a href="https://miktex.org/download">miktex.org/download</a> and run it</li>
+<li>Choose <strong>Install for: only me</strong> if you do not have administrator rights</li>
+<li>When asked about missing packages, set <strong>Install missing packages on-the-fly</strong> to <strong>Yes</strong>. If you skipped this, open <strong>MiKTeX Console</strong>, go to <strong>Settings &gt; General</strong>, and set it there</li>
+<li>Restart RStudio and render the test document. The first render can take several minutes while MiKTeX downloads extras</li>
+</ol>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Install <strong>MacTeX</strong>.</p>
+<ol type="1">
+<li>Download from <a href="https://tug.org/mactex/">tug.org/mactex</a>. It is a large download (several GB), so start it on a good connection</li>
+<li>Open the downloaded <code>.pkg</code> file and click through the installer with the default options</li>
+<li>Restart RStudio and render the test document</li>
+</ol>
+</div>
+</div>
+</div>
+<p>If both TinyTeX and your new install are present and you see odd errors, you can remove TinyTeX by running <code>tinytex::uninstall_tinytex()</code> in the Console, then restart.</p>
+<p>Still stuck? Skip PDF for now. The workshop will work with HTML output, and we can help you in the first 15 minutes.</p>
 </div>
 </div>
 </section>

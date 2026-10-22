@@ -188,6 +188,12 @@ Lots of text will scroll past, which is normal. A few tips:
 
 Journal articles are usually turned into a PDF, and for that Quarto needs a behind-the-scenes tool called LaTeX. **TinyTeX** is a small, friendly version of it. You only install it once and never need to open it yourself.
 
+
+::: {.callout-note}
+## Already have LaTeX?
+If you already use MacTeX, MiKTeX or TeX Live, you can skip this step, just check that the test below works.
+:::
+
 In the RStudio (or Positron) **Console**, paste:
 
 ```r
@@ -211,9 +217,34 @@ Hello, PDF!
 
 A PDF with "Hello, PDF!" means you are ready. The **first** render can take a few minutes while LaTeX fetches a few extras, so please be patient. After that it is much faster.
 
-::: {.callout-note}
-## Already have LaTeX?
-If you already use MacTeX, MiKTeX or TeX Live, you can skip this step, as long as the test above works.
+::: {.callout-warning}
+## TinyTeX did not work? Try this instead
+You only need **one** LaTeX installation. If TinyTeX failed, use the option for your computer below. Then restart RStudio (or Positron) and run the test document from the step above.
+
+::: {.panel-tabset}
+
+## Windows
+
+Install **MiKTeX**.
+
+1. Download the installer from [miktex.org/download](https://miktex.org/download) and run it
+2. Choose **Install for: only me** if you do not have administrator rights
+3. When asked about missing packages, set **Install missing packages on-the-fly** to **Yes**. If you skipped this, open **MiKTeX Console**, go to **Settings > General**, and set it there
+4. Restart RStudio and render the test document. The first render can take several minutes while MiKTeX downloads extras
+
+## macOS
+
+Install **MacTeX**.
+
+1. Download from [tug.org/mactex](https://tug.org/mactex/). It is a large download (several GB), so start it on a good connection
+2. Open the downloaded `.pkg` file and click through the installer with the default options
+3. Restart RStudio and render the test document
+
+:::
+
+If both TinyTeX and your new install are present and you see odd errors, you can remove TinyTeX by running `tinytex::uninstall_tinytex()` in the Console, then restart.
+
+Still stuck? Skip PDF for now. The workshop will work with HTML output, and we can help you in the first 15 minutes.
 :::
 
 ## Step 8: Final check (2 minutes)

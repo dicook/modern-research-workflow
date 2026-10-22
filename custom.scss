@@ -3,7 +3,10 @@ $body-font-size: 1.2rem !default;
 $headings-font-weight:  500 !default;
 $font-size-base: 1.2rem;
 
-$link-color: #00008b !default;
+$link-color: #027EB6!default;
+
+// Callout border, title tint and icon use the slide blue
+$callout-color-tip: #006dae;
 
 /*-- scss:rules --*/
 h1, h2, h3, h4, h5, h6 {
@@ -24,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 
 li {
   line-height: 1;
+}
+
+.f150 {
+  font-size: 150%;
 }
 
 .f80 {
@@ -47,18 +54,43 @@ li {
 }
 
 .transition-slide {
-  background-color: #006dae!important;
-  font-size: 150%;
+  background-color: #006DAE!important;
+  font-size: 110%;
   align: center;
 }
 
+// White links on the title, transition and activity slides, including the
+// footer (which lives outside the slide, hence :has() on the current slide)
+.reveal #title-slide a,
+.reveal .transition-slide a,
+.reveal .activity-slide a,
+.reveal:has(section.present#title-slide) .footer a,
+.reveal:has(section.present.transition-slide) .footer a,
+.reveal:has(section.present.activity-slide) .footer a {
+  color: #fff;
+}
+
+// Slide number and menu icon (the icon is an SVG with a hard-coded fill)
+.reveal:has(section.present#title-slide),
+.reveal:has(section.present.transition-slide),
+.reveal:has(section.present.activity-slide) {
+  .slide-number {
+    color: #fff;
+    background-color: transparent;
+  }
+
+  .slide-menu-button .fa-bars::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>');
+  }
+}
+
 .activity-slide {
-  background-color: #e78c45!important;
+  background-color: #D93F00!important;
 }
 
 .activity-slide h2::before,
 .activity-slide h3::before {
-  content: "✏️ ";
+  content: "👩🏽‍💻 ";
 }
 
 // Uses the `bounce` keyframes from animate.css (loaded by the more-fragments extension)
@@ -72,6 +104,64 @@ li {
   animation: bounce 1s;
 }
 
+// Code highlighting matched to the slide palette
+// (Monash blue for functions, darkened orange accent for strings)
+$code-blue: #006dae;
+$code-orange: #b4530f;  // #e78c45 is too light to read on white
+$code-purple: #7a3e9d;
+$code-teal: #00796b;
+$code-muted: #6a7b8c;
+
+.reveal div.sourceCode {
+  background-color: #f5f8fb;
+  border: 1px solid #dbe5ee;
+  border-left: 4px solid $code-blue;
+  border-radius: 6px;
+
+  pre code {
+    background-color: transparent;
+    color: #24292f;
+  }
+
+  code span {
+    &.co, &.do, &.an, &.cv, &.in { color: $code-muted; font-style: italic; }
+    &.fu                         { color: $code-blue; }
+    &.st, &.ch, &.ss, &.vs       { color: $code-orange; }
+    &.dv, &.fl, &.bn, &.cn       { color: $code-purple; }
+    &.ot, &.sc, &.op, &.at       { color: $code-teal; }
+    &.kw, &.cf                   { color: #004a77; font-weight: 600; }
+  }
+}
+
+// Inline code: same blue on a pale chip, so it reads on light and dark slides
+// (overrides Quarto's section.has-light/dark-background code colours)
+.reveal section :not(pre, .countdown) > code {
+  color: $code-blue;
+  background-color: #f5f8fb;
+  border: 1px solid #dbe5ee;
+  border-radius: 4px;
+  padding: 0.05em 0.3em;
+}
+
+// Callouts: solid white body with dark text so they stand apart from
+// coloured slide backgrounds (e.g. the orange activity slides)
+.reveal div.callout {
+  background-color: #fff;
+  color: #222;
+  border-radius: 6px;
+  overflow: hidden;
+
+  &.callout-style-default {
+    border-top-color: #dbe5ee;
+    border-right-color: #dbe5ee;
+    border-bottom-color: #dbe5ee;
+  }
+
+  .callout-title {
+    color: #004a77;
+  }
+}
+
 // Shrink a callout (and any code block inside it) to its content width
 // Quarto puts the class on a wrapper div around the callout
 .reveal .fit-content > .callout,
@@ -83,6 +173,21 @@ li {
   pre {
     width: fit-content;
   }
+}
+
+// Light background panels for columns
+.reveal .column.panel {
+  background: rgba(#006DAE, 0.07);
+  border-radius: 8px;
+  padding: 0.5em 0.75em;
+  box-sizing: border-box;
+  margin-right: 3%;
+}
+
+// Equal-height panels: make their row a flex container
+.reveal .columns:has(> .column.panel) {
+  display: flex;
+  align-items: stretch;
 }
 
 .code_block_short {
