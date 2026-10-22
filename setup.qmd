@@ -162,7 +162,7 @@ Packages are add-ons that give R extra abilities. Open RStudio (or Positron), cl
 
 ```r
 pkgs <- c("usethis", "here", "ggplot2", 
-          "quarto", "rmarkdown", "knitr")
+          "quarto", "rmarkdown", "knitr", "fs")
 
 install.packages(pkgs)
 ```
@@ -178,6 +178,7 @@ Lots of text will scroll past, which is normal. A few tips:
 ![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/quarto.png){alt="quarto hexsticker" width="80px"}
 ![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/rmarkdown.png){alt="rmarkdown hexsticker" width="80px"}
 ![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/knitr.png){alt="knitr hexsticker" width="80px"}
+![](https://github.com/rstudio/hex-stickers/raw/main/thumbs/fs.png){alt="knitr hexsticker" width="80px"}
 
 ## Step 7: Install TinyTeX for PDF articles (5-10 minutes)
 
