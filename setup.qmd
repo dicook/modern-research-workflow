@@ -148,7 +148,7 @@ GitHub Desktop is a friendly app for saving and sharing your work. This step als
 
 **Tell Git who you are**
 
-5. Open the settings: on **Windows**, **File > Options**. On **macOS**, **GitHub Desktop > Settings**
+5. Open the settings: on **Windows**, **GitHub Desktop > File > Options**. On **macOS**, **GitHub Desktop > Settings**
 6. Go to the **Git** tab and enter your **name** and your **email**. Use the same email as your GitHub account
 
 ::: {.callout-note}
