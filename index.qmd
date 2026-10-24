@@ -11,7 +11,7 @@ format:
     smooth-scroll: true
 ---
 
-<a class="repo-link" href="https://github.com/dicook/modern-research-workflow" target="_blank" rel="noopener"><i class="bi bi-github"></i> Link to the main GitHib repo: dicook/modern-research-workflow</a>
+<a class="repo-link" href="https://github.com/dicook/modern-research-workflow" target="_blank" rel="noopener"><i class="bi bi-github"></i> Link to the main GitHub repo: dicook/modern-research-workflow</a>
 
 ::: {.lead}
 This workshop is for early-career researchers, academics and students (honours, masters and PhD) who already use R for analysis and want their work to be easier to share, check and build on.
