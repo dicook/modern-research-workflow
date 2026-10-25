@@ -88,6 +88,11 @@ li {
   background-color: #D93F00!important;
 }
 
+// "Code" label on folded code chunks
+.reveal .activity-slide details.code-fold > summary {
+  color: #fff;
+}
+
 .activity-slide h2::before,
 .activity-slide h3::before {
   content: "👩🏽‍💻 ";

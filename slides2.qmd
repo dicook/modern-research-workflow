@@ -33,7 +33,7 @@ library(countdown)
 
 - Writing with Quarto: papers and slides from one source 
 - Citations, journal templates, linking results to code 
-- Sharing research code: packaging, licences, citation files, Zenodo 
+- Sharing research code: packaging, licences, citation files
 
 <br>
 
@@ -121,7 +121,7 @@ No copying numbers from output into Word, so no transcription errors.
 
 ::: callout-tip
 ## Steps
-1. Create `paper.qmd` and `references.bib` in your `shared-project` repo. You can use your IDE to get a starter file **File > New Quarto document**, and choose HTML output.
+1. Create `paper.qmd` and `references.bib` in your `shared-project` repo. You can get a starter file from your IDE with **File > New Quarto Document**, choosing HTML output.
 2. Click **Render**. The HTML appears in the Viewer or your browser.
 3. Check: is there a figure, a numbered cross-reference, a citation, and a bibliography at the end?
 4. Change the inline calculation to the **median**, render again, and watch the number change.
@@ -129,7 +129,7 @@ No copying numbers from output into Word, so no transcription errors.
 :::
 
 ::: {.f60}
-Common problems: package not installed, wrong working folder (use here::here() for data), or missing blank lines around the chunk. Penguins needs R 4.5.0 or newer.
+Common problems: package not installed, wrong working folder (use `here::here()` for data), or missing blank lines around the chunk. The built-in `penguins` data needs R 4.5.0 or newer.
 :::
 
 `r countdown::countdown(6, 0, top = 0, right = 0, font_size = "1.6rem")`
@@ -182,7 +182,7 @@ Quarto asks whether you trust the authors of the template. Say yes for quarto-jo
 ::: callout-tip
 ## Steps
 1. Open a **Terminal** (RStudio: **Tools > Terminal > New Terminal**) in your `shared-project` folder
-2. Run `quarto use template quarto-journals/jasa`. Answer **Y** to trust the authors, and give the folder a name such as `elsevier-paper`
+2. Run `quarto use template quarto-journals/jasa`. Answer **Y** to trust the authors, and give the folder a name such as `jasa-paper`
 3. Open the `.qmd` file in the new folder and click **Render**
 4. Replace one sentence with your own, with a citation from your `references.bib`
 :::
@@ -250,7 +250,7 @@ Other ways to handle slow chunks
 
 # Slides {.transition-slide}
 
-## Sharing through GitHub pages
+## Sharing through GitHub Pages
 
 :::: {.columns}
 ::: {.column}
@@ -271,7 +271,7 @@ Your site is live
 
 Add this information to the **About** block.
 
-By default the README.md is turned into a website. If `index.html` exists, this will be used.
+By default, `README.md` is turned into the home page. If `index.html` exists, it is used instead.
 :::
 
 :::
@@ -319,9 +319,9 @@ There is no `index.html` yet, so GitHub turns your `README.md` into the home pag
 ::: {.f80}
 
 - others will use your methods 
-- you want reuse your functions
+- you want to reuse your functions
 - there is a need for documentation and tests
-- `install` to just work for anyone
+- installation needs to just work for anyone
 
 :::
 
@@ -337,7 +337,7 @@ mypackage/
 ├── R/              
 ├── man/ 
 ├── data/               
-├── tests/testhat/ 
+├── tests/testthat/ 
 ├── vignettes/         
 └── README.md
 ```
@@ -365,8 +365,8 @@ devtools::check()
 
 | What | Choice |
 |------|---------------|
-| Permissive licenses are very easy going | MIT or Apache 2.0 |
-| Code, derived work must also use this | GPL |
+| Permissive licences, very easy-going | MIT or Apache 2.0 |
+| Code, where derived work must use the same licence | GPL |
 | Other work | CC BY 4.0 |
 :::
 
@@ -413,12 +413,12 @@ my_function <- function(x) {
 }
 ```
 4. In RStudio, put your cursor inside the function and choose **Code > Insert Roxygen Skeleton**. Complete some basic description of your function
-5. Add a license `use_mit_license()`.
-6. Edit the DESCRIPTION file to list you as the author.
-7. Add a citation using `use_citation()`. (It needs editing, to do later.)
-8. Use `devtools::document()`, `devtools::check()` and `devtools::install()` to make documentation, check package structure and install it. 
+5. Add a licence with `usethis::use_mit_license()`.
+6. Edit the `DESCRIPTION` file to list yourself as the author.
+7. Add a citation file with `usethis::use_citation()` (you can edit it later).
+8. Use `devtools::document()`, `devtools::check()` and `devtools::install()` to build the documentation, check the package, and install it.
 9. **Commit** and **push** in GitHub Desktop to publish it to a **public** repo.
-10. Check that your partner can install it by running `pak::pak(YOURUSERNAME/mypackage)`
+10. Check that your partner can install it by running `pak::pak("YOURUSERNAME/mypackage")`
 :::
 :::
 
@@ -443,7 +443,7 @@ my_function <- function(x) {
 - [Quarto gallery](https://quarto.org/docs/gallery/)
 - [Journal templates](https://quarto.org/docs/journals/) and also [ANZJS](https://github.com/emitanaka/quarto-anzjs)
 - [Monash Quarto templates](https://github.com/quarto-monash)
-- [The Turing Way](https://book.the-turing-way.org) general advice on modern research practice
+- [The Turing Way](https://book.the-turing-way.org): general advice on modern research practice
 - [R packages (2e)](https://r-pkgs.org/) by Wickham and Bryan
 
 ## End of session 2 {.center}

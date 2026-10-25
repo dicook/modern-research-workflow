@@ -1,0 +1,549 @@
+---
+title: "A Modern Research Workflow with R and GitHub"
+subtitle: "Session 3: AI in the research workflow, and data visualisation"
+author: "Dianne Cook <br> Econometrics and Business Statistics <br> Monash University"
+date: "28 Oct 2026"
+format:
+  revealjs:
+    theme: "custom.scss"
+    slide-number: true
+    footer: "[https://dicook.github.io/modern-research-workflow/](https://dicook.github.io/modern-research-workflow/)"
+    incremental: false
+    code-line-numbers: false
+    preview-links: auto
+title-slide-attributes:
+  data-background-color: "#006dae"
+  data-background-opacity: "0.5"
+filters:
+  - more-fragments
+  - roughnotation
+engine: knitr
+---
+
+## This session {.smaller}
+
+- AI in the research workflow 
+    - How AI was used for developing the workshop
+    - Connecting your choice of AI with your IDE
+    - Pros and cons (as of today)
+- Data visualisation 
+    - Inserting figures in Quarto documents
+    - Layout and sizing
+    - Captions and alt text
+    - Mapping of variables, and polishing
+- Wrap-up 
+
+Several hands-on activities. Keep your `shared-project` open, and commit as you go.
+
+
+<!--
+- What I have used AI for here, and which one
+- Connecting IDA with AI choice
+- What can go wrong: bloated code, bloated slides, inanities, common errors newbies make, bad citations
+- inserting plots into paper
+- layout, sizing
+- captions
+- polishing
+-->
+
+# AI in the research workflow {.transition-slide}
+
+
+## Where AI helps in R work
+
+::: {.columns}
+::: {.column .panel width="33%"}
+**Code help**
+
+Explain unfamiliar code, suggest a first draft, translate between approaches
+:::
+::: {.column .panel width="33%"}
+**Debugging**
+
+Interpret an error message, spot a likely cause, propose a fix
+:::
+::: {.column .panel width="33%"}
+**Documentation**
+
+Draft comments, function docs and README sections from code you wrote
+:::
+:::
+
+
+::: {.f70}
+Treat it like a fast, confident colleague: one who is sometimes wrong, and who will likely bloat your code, use outdated styles and add too many checks. You stay responsible for the result.
+:::
+
+## AI use in this workshop
+
+:::: {.columns}
+::: {.column}
+
+**Free** web interface
+
+- Install instructions
+- Finding resources
+- Initial outline of content
+- Illustrations
+
+:::
+::: {.column}
+
+**Integrated** with Positron
+
+- Moving from a plain README web page to a styled `index.qmd`
+- Fixing style in slides, writing some `scss` elements
+- Repetitive changes in content
+- Code enhancements
+- Spelling and grammar
+
+:::
+::::
+
+## Connecting AI to your IDE
+
+::: {.panel-tabset}
+
+## RStudio
+
+1. Update to RStudio **2026.04 or newer**
+2. Click the **Posit Assistant** toolbar button
+3. **Install Posit Assistant**
+4. **Configure provider > Connect**, then sign in
+
+## Positron
+
+1. Open the **Posit Assistant** sidebar
+2. **Help me set it up**
+3. **Configure AI providers**
+4. Pick a provider and sign in
+
+:::
+
+::: notes
+Positron alternative: run "Authentication: Configure Language Model Providers" from the Command Palette. Menu wording changes quickly, so test on your own install first.
+:::
+
+## Choosing a provider
+
+::: {.f70}
+
+| Option | Sign in | Good for |
+|----------------|---------|-------------|
+| **Posit AI Pass** (Posit’s own service) | Browser login | Simplest, no keys to manage |
+| **Your own account** (Anthropic, OpenAI and others) | API key | If you already pay for one |
+| **GitHub Copilot** | Browser login | Positron, if you have access |
+| **Local model** (Ollama, LM Studio) | None | Data stays on your computer |
+
+<br>
+The IDE should show the **cost** of any paid usage.
+
+:::
+
+<!-- 
+## Getting better answers
+
+- Give a **minimal example** that reproduces the problem
+- Paste the **exact error message**, and say what you expected
+- State your **R version and packages**
+- Ask it to **explain** the fix, not just supply code
+- Prefer **small, specific requests** over "write my analysis"
+
+::: notes
+Never paste real participant data. Build a small fake or built-in example instead.
+:::
+
+
+## Risks
+
+::: {.columns}
+::: {.column width="33%"}
+**Hallucinated code and references**
+
+Functions, arguments, packages and citations that do not exist, or do not do what is claimed
+:::
+::: {.column width="33%"}
+**Privacy**
+
+Prompts are sent to a third party. Sensitive, identifiable or unpublished data should not be pasted into tools your institution has not approved
+:::
+::: {.column width="33%"}
+**Disclosure**
+
+Journals, funders and universities set their own rules, and they are changing
+:::
+:::
+
+## Checking what you are given
+
+| Claim | How to check |
+|-------|--------------|
+| "Use `package::fn()`" | Does it exist? `?fn`, CRAN page, package docs |
+| "This argument does X" | Read the help page, try a tiny example |
+| "The code works" | Run it, compare against a known answer |
+| "Smith et al. (2019) found..." | Look up the DOI yourself. Never cite what you have not found |
+
+. . .
+
+AI-assisted changes belong in Git like any others. Commit them separately and review the diff before you accept them.
+
+-->
+
+## Disclosure norms
+
+- AI tools generally **cannot be listed as authors**, and you remain accountable for everything submitted
+- Many journals and funders ask you to **state what you used and for what**
+- Check the policy of your **journal, funder and institution** before you submit
+- Record the **tool, version and purpose** as you work, so you can report it accurately
+
+
+::: {.f70}
+
+> "Code debugging and function documentation were assisted by [tool, version]. All output was reviewed and tested by the authors."
+:::
+
+
+## Debug a function {.activity-slide}
+
+::: {.panel-tabset}
+
+## Fix this
+
+::: callout-tip
+
+1. Run the broken function below and note what goes wrong
+2. Give an AI assistant a **minimal example** and the symptom. Do not paste any real data
+3. Apply its suggested fix, then **check it yourself** (see the next slide)
+:::
+
+```r
+library(palmerpenguins)
+
+group_means <- function(data, group, value) {
+  tapply(data$value, data$group, mean)
+}
+
+group_means(penguins, "species", "flipper_length_mm")
+```
+
+## Answer
+
+::: {.f80}
+
+A fix is not finished until you have tested it against something you trust.
+
+```r
+group_means <- function(data, group, value) {
+  tapply(data[[value]], data[[group]], mean, na.rm = TRUE)
+}
+
+group_means(penguins, "species", "flipper_length_mm")
+
+# Compare with an independent calculation
+aggregate(flipper_length_mm ~ species, data = penguins, FUN = mean)
+```
+:::
+
+::: {.f60}
+
+- The original bug is that `data$value` looks for a column literally called "value". The second issue is that `mean` returns NA when the column has missing values. Discuss any differences between the assistant's version and this one.
+- Did it handle missing values? 
+- Does the documentation describe what the code actually does? 
+- Did the assistant change anything you did not ask for?
+- Why didn't it point out that there is a version of the penguin data in base R?
+:::
+:::
+
+`r countdown::countdown(5, 0, top = 0, right = 0, font_size = "1.6rem")`
+
+# Data visualisation {.transition-slide}
+
+## A figure is an output, not a file
+
+- Data in, figure out, with **no manual editing in between**
+- Rerun the script and get the same figure
+- Changing the data or the style means changing one line, not redrawing
+
+If you [map variables to plot elements]{.rn-fragment rn-type=circle rn-color=#e78c45 rn-strokewidth=3 rn-padding=12} correctly with `ggplot2`, then the [plot is a statistic.]{.rn-fragment rn-type=circle rn-color=#e78c45 rn-strokewidth=3 rn-padding=12} 
+
+## Publication-ready habits
+
+::: {.columns}
+::: {.column .panel .f80 width="50%"}
+**Show the data**
+
+Points or distributions, not only bars of means
+
+**One message per figure**
+
+The title or caption says what to notice
+
+**Label clearly**
+
+Axes with units, readable text size
+:::
+::: {.column .panel .f80 width="50%"}
+**Accessible colour**
+
+Colourblind-safe palettes, and not colour alone
+
+**Honest scales**
+
+Bars start at zero
+
+**Right size and format**
+
+Match the journal's column width. Prefer vector formats (PDF, SVG) where allowed
+:::
+:::
+
+## Spot the problems {.activity-slide}
+
+::: {.panel-tabset}
+
+## Wrong 
+
+::: {.f60}
+List everything you would fix, run the code and think about how to make changes.
+
+```{r}
+#| label: txhousing-wrong
+#| fig-height: 5
+#| fig-width: 10
+#| out-width: 60%
+#| fig-align: center
+#| echo: true
+#| code-fold: true
+library(ggplot2)
+library(dplyr)
+
+txhousing_price <- txhousing |> 
+  group_by(city) |>
+  summarise(price_m = median(median, na.rm=TRUE))
+
+ggplot(txhousing_price, aes(x=city, y=price_m)) +
+  geom_col() 
+```
+:::
+
+::: {.f50}
+Hints: the x axis, the labels, the information hidden behind each bar.
+:::
+
+## Fix
+
+::: {.column .f60}
+
+```{r}
+#| label: txhousing-better
+#| fig-height: 8
+#| fig-width: 5
+#| out-width: 50%
+#| fig-align: center
+#| echo: true
+#| code-fold: true
+
+library(forcats)
+
+txhousing_price <- txhousing |> 
+  group_by(city) |>
+  summarise(price_m = median(median, na.rm=TRUE),
+            price_q3 = quantile(median, 0.75, na.rm=TRUE),
+            price_q1 = quantile(median, 0.25, na.rm=TRUE)) 
+
+ggplot(txhousing_price, ) +
+  geom_point(aes(x=fct_reorder(city, price_m), 
+                 y=price_m)) +
+  geom_errorbar(aes(x=fct_reorder(city, price_m), 
+                    ymin=price_q1, 
+                    ymax=price_q3), width=0) +
+  scale_y_continuous("Median price ($ thousands)", 
+                     breaks=c(100000, 150000, 200000), 
+                     labels=c("100", "150", "200")) +
+  xlab("") + 
+  coord_flip()
+```
+
+:::
+::: {.column}
+- Indication of variation added, using quartiles
+- City ordered by median price
+- Axes flipped to read city names
+- Repeated zeros removed, and labels tidied
+:::
+
+:::
+
+`r countdown::countdown(5, 0, top = 0, right = 0, font_size = "1.6rem")`
+
+## Sizing of figures 
+
+:::: {.columns}
+::: {.column}
+
+```{{r}}
+#| label: fig-flippers
+#| fig-cap: "Flipper length by species."
+#| fig-width: 3.5
+#| fig-height: 2.5
+#| out-width: 80%
+#| fig-align: center
+```
+:::
+::: {.column .f70}
+
+| Option | What it does |
+|--------|--------------|
+| `fig-width`, `fig-height` | Size the plot is **drawn** (inches) |
+| `out-width` | Scales the finished image on the page |
+| `fig-dpi` | Resolution of raster figures |
+
+If you find there is too much white space around the figure, adjust the width and height. The figure probably has the wrong aspect ratio for the space available.
+
+The package `patchwork` is great for organising multiple plots into a figure.
+
+:::
+::::
+
+## Size your figure {.activity-slide}
+
+::: callout-tip
+## In your `shared-project`, open `paper.qmd`
+
+1. Copy the code from the **Fix** tab of *Spot the problems* (plus the `library()` lines from **Wrong**) into a new chunk, with a label like `fig-prices` and a `fig-cap`
+2. Render. Then change `fig-width` and `fig-height` and render again. Which shape suits 46 city names?
+3. Try `out-width: 50%` and `100%`. Notice the text gets smaller or larger with the image
+4. Refer to the figure in a sentence with `@fig-prices`
+5. Commit and push, with a message describing the change
+:::
+
+::: {.f60}
+Aim for labels that are readable, little white space, and a shape that fits the page. Try a tall, narrow figure first, e.g. `fig-width: 5`, `fig-height: 8`.
+:::
+
+`r countdown::countdown(5, 0, top = 0, right = 0, font_size = "1.6rem")`
+
+## Captions and alt text
+
+:::: {.columns}
+::: {.column .f60}
+
+Captions should have three parts.
+
+| Part | Answers | Example |
+|------|---------|------------|
+| **1. What** | What is this about? | Exploring species differences in flipper length of penguins. |
+| **2. How** | What is shown, and how are variables mapped? | Each point is one penguin, jittered to reduce overlap. Black points are species means. |
+| **3. So what** | What should the reader learn? | Gentoo penguins have the longest flippers. |
+
+:::
+::: {.column .f70}
+
+::: {.fragment}
+
+Alt text describes the plot for vision-impaired readers
+
+| Include | Example |
+|---------|------------------|
+| **Chart type** | Scatter plot |
+| **What is plotted** | Flipper length ranging from 170 to 230 against Adelie, Chinstrap and Gentoo |
+| **The key pattern** | Adelie and Chinstrap range from 170 to 210, and Gentoo from 200 to 230 |
+
+:::
+
+:::
+:::
+
+## Caption your figure {.activity-slide}
+
+::: {.panel-tabset}
+
+## To do
+
+::: callout-tip
+## In `paper.qmd`, for your `fig-prices` chunk
+
+1. Write a three-part `fig-cap`: **what** it is about, **how** to read it, and **so what**
+2. Write `fig-alt`: chart type, what is plotted, and the key pattern
+3. Render, then right-click the figure and choose **Inspect** to check the `alt` text is there
+4. Swap with your partner: can they picture the plot from your alt text alone?
+5. Commit and push
+:::
+
+```{{r}}
+#| label: fig-prices
+#| fig-cap: "What. How. So what."
+#| fig-alt: "Chart type, what is plotted, the key pattern."
+```
+
+::: {.f60}
+Hint: the data are monthly median house sale prices for 46 Texas cities, 2000 to 2015.
+:::
+
+`r countdown::countdown(5, 0, top = 0, right = 0, font_size = "1.6rem")`
+
+## Answers
+
+::: {.f50}
+
+Example caption: "Median house prices across 46 Texas cities, 2000 to 2015. Each point is a city's median monthly sale price, with lines spanning the first to third quartile; cities are ordered by median. Prices roughly double from the cheapest cities (Paris, Harlingen, around $80–90k) to the most expensive (Collin County, Midland, around $180–200k), and the more expensive cities also tend to vary more."
+
+Example alt text: "Dot plot with horizontal interval bars of median house price for 46 Texas cities, ordered from lowest to highest. Prices range from about $80,000 in Paris to about $196,000 in Collin County. Intervals are wider for the more expensive cities."
+
+:::
+:::
+
+# Wrap-up {.transition-slide}
+
+## What we covered {.smaller}
+
+::: {.columns}
+::: {.column .panel width="33%"}
+**1 · GitHub**
+
+- Project structure, README, relative paths with `here`
+- Commit, push, pull and history in GitHub Desktop
+- Sharing a repo with a partner, fixing merge conflicts
+- Issues, branches and pull requests
+:::
+::: {.column .panel width="33%"}
+**2 · Publications and software**
+
+- One Quarto source for papers and slides
+- Citations, cross-references and journal templates
+- Slow chunks, and publishing on GitHub Pages
+- Starting a package, choosing a licence, where it can live
+:::
+::: {.column .panel width="33%"}
+**3 · AI and figures**
+
+- AI in your IDE: where it helps, the risks
+- Check everything, and disclose AI use
+- Fixing a poor chart; publication-ready habits
+- Sizing, captions and alt text
+:::
+:::
+
+
+## Resources
+
+:::: {.columns}
+::: {.column}
+
+- [Positron: AI getting started](https://positron.posit.co/assistant-getting-started.html)
+- [Positron: language model providers](https://positron.posit.co/assistant-providers.html)
+- [Posit Assistant](https://assistant.posit.co)
+- [RStudio: Posit AI](https://docs.posit.co/ide/user/ide/guide/tools/posit-ai.html)
+- [Posit AI Pass](https://posit.co/products/ai)
+:::
+::: {.column}
+- [Best Practices for Data Visualisation](https://royal-statistical-society.github.io/datavisguide/)
+- [Writing alt text for data visualisations](https://numbats.github.io/alt-text-for-data-plots/)
+:::
+::::
+
+## End of session 3 {.center}
+
+Thank you! Keep practising with your `shared-project`.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

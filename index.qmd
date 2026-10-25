@@ -171,19 +171,13 @@ Break
 ::: {.material-card .soon}
 <i class="bi bi-easel"></i>
 
-**Session 3 slides**
+[**Session 3 slides**](slides3.html){.stretched-link target="_blank" rel="noopener"}
 
 [AI in the research workflow, and data visualisation]{.card-desc}
 
-[Coming soon]{.badge .text-bg-secondary}
 :::
 
 :::
-
-<!-- When session 3 is ready, remove `.soon` and the badge, and make the title
-a link like the other cards:
-[**Session 3 slides**](slides3.html){.stretched-link target="_blank" rel="noopener"} -->
-
 
 
 ## Presenter

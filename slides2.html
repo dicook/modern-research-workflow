@@ -107,7 +107,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slides2_files/libs/revealjs/dist/theme/quarto-27ad72911978913902450bc88b635e77.css">
+  <link rel="stylesheet" href="slides2_files/libs/revealjs/dist/theme/quarto-abb9f67e85cc83bbab3add14fbd1696e.css">
   <link href="slides2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slides2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="slides2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -226,7 +226,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <ul>
 <li>Writing with Quarto: papers and slides from one source</li>
 <li>Citations, journal templates, linking results to code</li>
-<li>Sharing research code: packaging, licences, citation files, Zenodo</li>
+<li>Sharing research code: packaging, licences, citation files</li>
 </ul>
 <p><br></p>
 <p>There are several short hands-on activities. Keep your <code>shared-project</code> from Session 1 open.</p>
@@ -329,7 +329,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </div>
 <div class="callout-content">
 <ol type="1">
-<li>Create <code>paper.qmd</code> and <code>references.bib</code> in your <code>shared-project</code> repo. You can use your IDE to get a starter file <strong>File &gt; New Quarto document</strong>, and choose HTML output.</li>
+<li>Create <code>paper.qmd</code> and <code>references.bib</code> in your <code>shared-project</code> repo. You can get a starter file from your IDE with <strong>File &gt; New Quarto Document</strong>, choosing HTML output.</li>
 <li>Click <strong>Render</strong>. The HTML appears in the Viewer or your browser.</li>
 <li>Check: is there a figure, a numbered cross-reference, a citation, and a bibliography at the end?</li>
 <li>Change the inline calculation to the <strong>median</strong>, render again, and watch the number change.</li>
@@ -339,9 +339,9 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </div>
 </div>
 <div class="f60">
-<p>Common problems: package not installed, wrong working folder (use here::here() for data), or missing blank lines around the chunk. Penguins needs R 4.5.0 or newer.</p>
+<p>Common problems: package not installed, wrong working folder (use <code>here::here()</code> for data), or missing blank lines around the chunk. The built-in <code>penguins</code> data needs R 4.5.0 or newer.</p>
 </div>
-<p><countdown-timer class="countdown" id="timer_81e103c3" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_952e5b66" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section></section>
 <section>
 <section id="citations-and-journal-templates" class="title-slide slide level1 transition-slide center">
@@ -393,7 +393,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <div class="callout-content">
 <ol type="1">
 <li>Open a <strong>Terminal</strong> (RStudio: <strong>Tools &gt; Terminal &gt; New Terminal</strong>) in your <code>shared-project</code> folder</li>
-<li>Run <code>quarto use template quarto-journals/jasa</code>. Answer <strong>Y</strong> to trust the authors, and give the folder a name such as <code>elsevier-paper</code></li>
+<li>Run <code>quarto use template quarto-journals/jasa</code>. Answer <strong>Y</strong> to trust the authors, and give the folder a name such as <code>jasa-paper</code></li>
 <li>Open the <code>.qmd</code> file in the new folder and click <strong>Render</strong></li>
 <li>Replace one sentence with your own, with a citation from your <code>references.bib</code></li>
 </ol>
@@ -403,7 +403,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <div class="f60">
 <p>The repo <a href="https://github.com/dicook/paper-example">https://github.com/dicook/paper-example</a> has a starter pack, if needed.</p>
 </div>
-<p><countdown-timer class="countdown" id="timer_cfd79620" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_34f84933" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="monash-quarto-templates" class="slide level2">
 <h2>Monash Quarto templates</h2>
@@ -485,7 +485,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 
 </section>
 <section id="sharing-through-github-pages" class="slide level2">
-<h2>Sharing through GitHub pages</h2>
+<h2>Sharing through GitHub Pages</h2>
 <div class="columns">
 <div class="column">
 <p>Make the repo <strong>public</strong>, then:</p>
@@ -501,7 +501,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <p><code>https://username.github.io/repo-name/</code></p>
 </div>
 <p>Add this information to the <strong>About</strong> block.</p>
-<p>By default the README.md is turned into a website. If <code>index.html</code> exists, this will be used.</p>
+<p>By default, <code>README.md</code> is turned into the home page. If <code>index.html</code> exists, it is used instead.</p>
 </div>
 </div><div class="column">
 <div class="panel-tabset">
@@ -541,7 +541,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <div class="f60">
 <p>There is no <code>index.html</code> yet, so GitHub turns your <code>README.md</code> into the home page. It’s simple, but the same steps publish slides or a thesis.</p>
 </div>
-<p><countdown-timer class="countdown" id="timer_94735c3c" minutes="3" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_f016d9d3" minutes="3" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section></section>
 <section>
 <section id="sharing-research-code" class="title-slide slide level1 transition-slide center">
@@ -555,9 +555,9 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <div class="f80">
 <ul>
 <li>others will use your methods</li>
-<li>you want reuse your functions</li>
+<li>you want to reuse your functions</li>
 <li>there is a need for documentation and tests</li>
-<li><code>install</code> to just work for anyone</li>
+<li>installation needs to just work for anyone</li>
 </ul>
 </div>
 </div><div class="column" style="width:50%;">
@@ -568,7 +568,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 ├── R/              
 ├── man/ 
 ├── data/               
-├── tests/testhat/ 
+├── tests/testthat/ 
 ├── vignettes/         
 └── README.md</code></pre>
 <p><br></p>
@@ -593,11 +593,11 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </thead>
 <tbody>
 <tr class="odd">
-<td>Permissive licenses are very easy going</td>
+<td>Permissive licences, very easy-going</td>
 <td>MIT or Apache 2.0</td>
 </tr>
 <tr class="even">
-<td>Code, derived work must also use this</td>
+<td>Code, where derived work must use the same licence</td>
 <td>GPL</td>
 </tr>
 <tr class="odd">
@@ -651,19 +651,19 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 }</code></pre>
 <ol start="4" type="1">
 <li>In RStudio, put your cursor inside the function and choose <strong>Code &gt; Insert Roxygen Skeleton</strong>. Complete some basic description of your function</li>
-<li>Add a license <code>use_mit_license()</code>.</li>
-<li>Edit the DESCRIPTION file to list you as the author.</li>
-<li>Add a citation using <code>use_citation()</code>. (It needs editing, to do later.)</li>
-<li>Use <code>devtools::document()</code>, <code>devtools::check()</code> and <code>devtools::install()</code> to make documentation, check package structure and install it.</li>
+<li>Add a licence with <code>usethis::use_mit_license()</code>.</li>
+<li>Edit the <code>DESCRIPTION</code> file to list yourself as the author.</li>
+<li>Add a citation file with <code>usethis::use_citation()</code> (you can edit it later).</li>
+<li>Use <code>devtools::document()</code>, <code>devtools::check()</code> and <code>devtools::install()</code> to build the documentation, check the package, and install it.</li>
 <li><strong>Commit</strong> and <strong>push</strong> in GitHub Desktop to publish it to a <strong>public</strong> repo.</li>
-<li>Check that your partner can install it by running <code>pak::pak(YOURUSERNAME/mypackage)</code></li>
+<li>Check that your partner can install it by running <code>pak::pak("YOURUSERNAME/mypackage")</code></li>
 </ol>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p><countdown-timer class="countdown" id="timer_974a718c" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_66976e0c" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="where-can-your-package-live" class="slide level2">
 <h2>Where can your package live?</h2>
@@ -713,7 +713,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <li><a href="https://quarto.org/docs/gallery/">Quarto gallery</a></li>
 <li><a href="https://quarto.org/docs/journals/">Journal templates</a> and also <a href="https://github.com/emitanaka/quarto-anzjs">ANZJS</a></li>
 <li><a href="https://github.com/quarto-monash">Monash Quarto templates</a></li>
-<li><a href="https://book.the-turing-way.org">The Turing Way</a> general advice on modern research practice</li>
+<li><a href="https://book.the-turing-way.org">The Turing Way</a>: general advice on modern research practice</li>
 <li><a href="https://r-pkgs.org/">R packages (2e)</a> by Wickham and Bryan</li>
 </ul>
 </section>
