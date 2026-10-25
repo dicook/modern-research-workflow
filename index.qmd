@@ -152,35 +152,39 @@ Break
 
 ::: {.materials-grid}
 
+::: {.material-card}
+<i class="bi bi-easel"></i>
+
+[**Session 1 slides**](slides1.html){.stretched-link target="_blank" rel="noopener"}
+
+[Reproducibility and collaboration with GitHub]{.card-desc}
+:::
+
+::: {.material-card}
+<i class="bi bi-easel"></i>
+
+[**Session 2 slides**](slides2.html){.stretched-link target="_blank" rel="noopener"}
+
+[Publications and software]{.card-desc}
+:::
+
 ::: {.material-card .soon}
 <i class="bi bi-easel"></i>
 
-**Session 1 slides**
+**Session 3 slides**
 
-[Coming soon]{.badge .text-bg-secondary}
-:::
-
-::: {.material-card .soon}
-<i class="bi bi-easel"></i>
-
-**Session 2 slides**
-
-[Coming soon]{.badge .text-bg-secondary}
-:::
-
-::: {.material-card .soon}
-<i class="bi bi-file-earmark-zip"></i>
-
-**Zip file of materials**
+[AI in the research workflow, and data visualisation]{.card-desc}
 
 [Coming soon]{.badge .text-bg-secondary}
 :::
 
 :::
 
-<!-- When ready, replace a card's contents with a link, e.g.
-[**Session 1 slides**](slides1.html){.stretched-link}
-and remove the `.soon` class and badge. -->
+<!-- When session 3 is ready, remove `.soon` and the badge, and make the title
+a link like the other cards:
+[**Session 3 slides**](slides3.html){.stretched-link target="_blank" rel="noopener"} -->
+
+
 
 ## Presenter
 
