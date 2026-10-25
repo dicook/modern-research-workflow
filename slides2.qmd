@@ -446,7 +446,7 @@ my_function <- function(x) {
 - [The Turing Way](https://book.the-turing-way.org) general advice on modern research practice
 - [R packages (2e)](https://r-pkgs.org/) by Wickham and Bryan
 
-## End of session 1 {.center}
+## End of session 2 {.center}
 
 After the break: AI in the research workflow, and data visualisation.
 

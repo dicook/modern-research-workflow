@@ -230,13 +230,6 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </ul>
 <p><br></p>
 <p>There are several short hands-on activities. Keep your <code>shared-project</code> from Session 1 open.</p>
-<!--
-## make sure to include these things
-
-- monash quarto templates
-- handling long computations - more for Quarto
-- making slides visible from GitHub with Pages
--->
 </section>
 <section>
 <section id="writing-with-quarto" class="title-slide slide level1 transition-slide center">
@@ -348,7 +341,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <div class="f60">
 <p>Common problems: package not installed, wrong working folder (use here::here() for data), or missing blank lines around the chunk. Penguins needs R 4.5.0 or newer.</p>
 </div>
-<p><countdown-timer class="countdown" id="timer_f0f85f18" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_81e103c3" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section></section>
 <section>
 <section id="citations-and-journal-templates" class="title-slide slide level1 transition-slide center">
@@ -410,7 +403,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <div class="f60">
 <p>The repo <a href="https://github.com/dicook/paper-example">https://github.com/dicook/paper-example</a> has a starter pack, if needed.</p>
 </div>
-<p><countdown-timer class="countdown" id="timer_0d95b400" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_cfd79620" minutes="5" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="monash-quarto-templates" class="slide level2">
 <h2>Monash Quarto templates</h2>
@@ -548,7 +541,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <div class="f60">
 <p>There is no <code>index.html</code> yet, so GitHub turns your <code>README.md</code> into the home page. It’s simple, but the same steps publish slides or a thesis.</p>
 </div>
-<p><countdown-timer class="countdown" id="timer_92ccf14c" minutes="3" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_94735c3c" minutes="3" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section></section>
 <section>
 <section id="sharing-research-code" class="title-slide slide level1 transition-slide center">
@@ -670,7 +663,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </div>
 </div>
 </div>
-<p><countdown-timer class="countdown" id="timer_5af6f8f3" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_974a718c" minutes="8" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="where-can-your-package-live" class="slide level2">
 <h2>Where can your package live?</h2>
@@ -724,334 +717,10 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <li><a href="https://r-pkgs.org/">R packages (2e)</a> by Wickham and Bryan</li>
 </ul>
 </section>
-<section id="end-of-session-1" class="slide level2 center">
-<h2>End of session 1</h2>
+<section id="end-of-session-2" class="slide level2 center">
+<h2>End of session 2</h2>
 <p>After the break: AI in the research workflow, and data visualisation.</p>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-<!--
-
-## Objectives {.smaller}
-
-By the end of this session you will be able to:
-
-- list several **outlets** for publishing software
-- understand the **benefits** of publishing a software paper
-- identify the **components** of a well-constructed software article
-- **draft** a paper plan and cover letter for your own software
-
-# Why publish software as an article? {.transition-slide style="align: center;"}
-
-## What is a software article?
-
-An academic publication whose primary subject is a piece of software. Instead of reporting a scientific finding, it typically describes:
-
-- **What it does**: the problem it solves and where it fits among existing tools
-- **How it works**: the methods, algorithms or models it implements
-- **How to use it**: installation, basic interface, a worked example
-- **Why it matters**: the gap it fills, the intended users, how it differs from alternatives
-- **Availability**: where the code lives (CRAN, GitHub), licence, how to cite it
-
-## Benefits to the community
-
-::: {.f70}
-
-1. **Discoverability**: indexed journals (Scopus, Google Scholar) surface your tool to people searching by topic or method, not by package name
-2. **Peer-reviewed vetting**: CRAN checks and CI show the code runs, but not that the methods are sound
-3. **Structured comparison**: papers must situate the tool among alternatives
-4. **Faster adoption and trust**: a peer-reviewed paper signals quality to potential users
-5. **Documentation that outlives the maintainer**: READMEs and vignettes vanish with a repository, a published paper is archived with a DOI
-
-:::
-
-. . .
-
-**Why not supplementary material?** It is not indexed, not independently citable, lightly reviewed, and tied to one study's lifecycle.
-
-::: notes
-4 min across this and the previous slide.
-:::
-
-## Common outlets
-
-::: {.panel-tabset}
-
-## Outlets
-
-- [Journal of Statistical Software](https://www.jstatsoft.org/index)
-- [The R Journal](https://journal.r-project.org)
-- [Journal of Open Source Software](https://joss.theoj.org)
-
-Many domain-specific journals have a software section, for example:
-
-- [Genome Biology](https://link.springer.com/journal/13059/volumes-and-issues/27-1)
-- [Methods of Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/toc/2041210x/current) 
-- [Royal Society Open Science](https://royalsocietypublishing.org/rsos)
-- [Applications in Plant Sciences](https://bsapubs.onlinelibrary.wiley.com/journal/21680450)
-
-## Comparison
-
-::: {style="font-size: 70%"}
-
-| Criterion         | JSS                        | The R Journal              | JOSS                           |
-|--------------------|----------------------------|------------------------------|---------------------------------|
-| Scope              | Any statistical software  | R only                      | Any research software          |
-| Length             | Long (full paper)         | Medium-long                     | Very short                     |
-| Review focus       | Methodology + code        | Package quality + writeup   | Codebase (tests, docs, license) |
-| Output format      | PDF only                  | Native HTML (+ PDF)         | PDF (via Markdown/GitHub)      |
-| Interactive figures| Not supported             | Supported (native HTML)     | Not part of the paper itself   |
-| Impact factor      | High               | Moderate, variable        | None by design                 |
-| Time to publish    | Slower, thorough           | Moderate                    | Often fast if code is ready    |
-| Best fit           | Novel/complex method       | Solid, R-specific package   | Working, well-engineered tool  |
-
-:::
-
-:::
-
-::: notes
-3 min. Point out that the right outlet depends on the stage of the software and how novel the method is.
-:::
-
-## Your turn {.activity-slide}
-
-Compare and contrast [these articles](https://docs.google.com/spreadsheets/d/1MFhmUNudJc9VQOVwIEqY80Geoi7EauguCemK9-6oBfk/edit?usp=sharing). **Work in pairs, take one article each, then swap notes.**
-
-::: {.f70}
-
-- JSS: [Wickham (2011) The Split-Apply-Combine Strategy for Data Analysis](https://www.jstatsoft.org/article/view/v040i01)
-- R Journal: [Ayala et al (2023) asteRisk - Integration and Analysis of Satellite Positional Data in R](https://journal.r-project.org/articles/RJ-2023-023/)
-- JOSS: [Graesser et al (2026) GeoWombat: Scalable geospatial and remote sensing analysis in Python](https://joss.theoj.org/papers/10.21105/joss.10812)
-- Genome Biology: [Holt et al (2026) Aardvark: sifting through differences in a mound of variants](https://link.springer.com/article/10.1186/s13059-026-04165-0)
-
-:::
-
-Glance through and note:
-
-::: {.f70}
-
-- How long is it? Sketch the paper structure
-- How much detail about the software? Any code fragments?
-- Is there an application section? Figures or a flow chart?
-- Is there a comparison with other software?
-- Format (PDF, HTML), links to source, supplementary material
-
-:::
-
-`<countdown-timer class="countdown" id="timer_13d4f1bb" minutes="7" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>`{=html}
-
-# What goes into an article about software? {.transition-slide style="align: center;"}
-
-## Anatomy of a software article
-
-::: {style="font-size: 75%"}
-
-| Section | Answers | In our examples |
-|---------|---------|-----------------|
-| **Problem and motivation** | Why write it? Why don't existing tools do the job? | All four open with the problem and the existing landscape |
-| **Key features** | What does it do? | JSS uses tables and illustrations, R Journal sections match the package components |
-| **Design and implementation** | How does it work? | JOSS requires a software design section, Genome Biology puts it in Methods, JSS and R Journal are mostly user-facing |
-| **Examples and applications** | Does it work? How is it used? | JSS has two worked examples, R Journal weaves examples into the text, Genome Biology benchmarks against other tools |
-| **Availability** | Where is it, under what licence, how do I cite it? | Links to package source and archive |
-
-:::
-
-::: notes
-3 min. Different journals weight these sections differently, so read the author guidelines of your target outlet first.
-:::
-
-## Opening with the problem
-
-::: {.panel-tabset}
-
-## JSS
-
-> What do we do when we analyze data? What are common actions and what are common mistakes? Given the importance of this activity in statistics, there is remarkably little research on how data analysis happens. This paper attempts to remedy a very small part of that lack by describing one common data analysis pattern: Split-apply-combine. 
-
-## R Journal
-
-::: {.f80}
-
-> Planning the launch, operation and orbital maneuvers of satellites requires predictions of the trajectory that a satellite will follow along time from a known state vector...
-
-> We introduce asteRisk, an R package that aims to provide a suite for astrodynamics analysis in R...
-
-:::
-
-## JOSS
-
-::: {.f80}
-
-> Satellite remote sensing has become essential for environmental monitoring, agriculture, disaster management, and land use analysis... yet the Python ecosystem for processing this data remains fragmented.
-
-:::
-
-:::
-
-## Showing the software
-
-::: {.panel-tabset}
-
-## JSS: explain with visuals
-
-Re-organising and summarising data, shown using tables and a conceptual illustration.
-
-:::: {.columns}
-::: {.column}
-![](images/sac1.png)
-:::
-::: {.column}
-![](images/sac3.png){width=600}
-:::
-::::
-
-## Genome Biology: compare with others
-
-Results illustrate features of the software while comparing it with current tools.
-
-:::: {.columns}
-
-::: {.column}
-![](images/examples-gb1.png){width=80%}
-:::
-
-::: {.column}
-![](images/examples-gb2.png){width=100%}
-:::
-
-::::
-
-:::
-
-::: notes
-4 min across these two slides.
-:::
-
-## Place your software in context
-
-- Don't reinvent the wheel, **stand on the shoulders of others**
-- Review existing tools in your introduction, and use them as a springboard or benchmark throughout the paper
-- Identify clearly what extra value _your_ software adds
-
-. . .
-
-**Guide your reader with a conceptual diagram.** The software may make sense in your head, but a first-time user needs a hand to understand the problem landscape, the rationale and the design solution.
-
-::: notes
-3 min. Show a conceptual diagram from one of the earlier articles if time allows.
-:::
-
-## Your turn {.activity-slide}
-
-**Map out your paper.** Choose one of your own software projects, or one of our examples.
-
-1. Find one existing tool to compare with. Note key differences in design, implementation, usability and application
-2. Write a couple of sentences each for:
-
-    - motivation
-    - design and implementation
-    - usage
-    - application
-
-3. If time, sketch a conceptual diagram: the problem it solves, the workflow, the algorithm, or a use case
-
-`<countdown-timer class="countdown" id="timer_2331aba4" minutes="8" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>`{=html}
-
-# Supporting and publishing your software {.transition-slide style="align: center;"}
-
-## Supporting your software
-
-::: {.columns}
-::: {.column width="50%"}
-
-**Where it lives**
-
-- Version-controlled source code: GitHub or GitLab
-- Place to download: CRAN, Bioconductor, r-universe
-- Releases: semantic versioning, `DESCRIPTION`, a GitHub release, `NEWS.md`
-
-**Portability**
-
-- Ask friends to install and try it
-- GitHub Actions or rhub across operating systems and R versions
-- Distribution through an archive such as CRAN
-
-:::
-::: {.column width="50%"}
-
-**Helping people use it**
-
-- [Unit tests](https://testthat.r-lib.org/)
-- Example datasets
-- Documentation: help files for each function, vignettes ("Getting started", "Case study"), cheatsheets or video walkthroughs
-- Branding, such as a hex sticker
-
-:::
-:::
-
-::: notes
-3 min. This builds directly on the GitHub material from Session 1.
-:::
-
-## Publishing best practices
-
-::: {.columns}
-::: {.column width="50%"}
-
-**Collaboration and reproducibility**
-
-- Keep the paper in a GitHub repository
-- Use R Markdown or Quarto with journal templates
-    - [R Journal: rjtools](https://rjournal.github.io/rjtools/)
-    - [JSS Quarto template](https://github.com/quarto-journals/jss)
-    - [Other article types](https://quarto.org/docs/journals/formats.html)
-
-**Accessibility**
-
-- Add alt text to figures
-
-:::
-::: {.column width="50%"}
-
-**Big, slow or private data**
-
-- Don't store the data in your R package
-- Use Apache Parquet files, DuckDB, or query the API that holds your data
-- For private data, share a simulated or small example
-
-**Submission**
-
-- Write a clear cover letter
-
-:::
-:::
-
-::: notes
-3 min.
-:::
-
-## Your turn {.activity-slide}
-
-**Write a cover letter** for your software that covers:
-
-- Problem statement: the knowledge gap your software fills
-- Audience: the intended user
-- Design features and highlights
-- Impact: is it easier, more accessible, more accurate, or does it give additional insight compared with what exists?
-
-`<countdown-timer class="countdown" id="timer_71a3f2d4" minutes="5" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>`{=html}
-
-# Summary
-
-- Compared common outlets for publishing software, though domain-specific ones may suit you better
-- Outlined the key sections of a software article
-- Placed your software among existing tools and planned a conceptual diagram
-- Covered supporting your software and publishing best practices
-- Drafted a cover letter for submission
-
-## End of session 2 {.center}
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
--->
 
 </section></section>
     </div>
