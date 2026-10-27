@@ -107,6 +107,8 @@ Hide code in the paper, keep it in the source: `execute: echo: false` in the YAM
 
 ## Linking results to code
 
+::: {.f80}
+
 | You write | You get |
 |-----------|---------|
 | `#| label: fig-flippers` in a chunk | a figure you can refer to |
@@ -116,14 +118,17 @@ Hide code in the paper, keep it in the source: `execute: echo: false` in the YAM
 
 No copying numbers from output into Word, so no transcription errors.
 
+Note: label is [`fig-XXX` without which link does not work.]{.rn-fragment rn-type=circle rn-color=#e78c45 rn-strokewidth=3 rn-padding=12}
+
+:::
 
 ## Render a document {.activity-slide}
 
 ::: callout-tip
 ## Steps
-1. Create `paper.qmd` and `references.bib` in your `shared-project` repo. You can get a starter file from your IDE with **File > New Quarto Document**, choosing HTML output.
+1. Create `paper.qmd` and `references.bib` in your `shared-project` repo. You can get a starter file from your IDE with **File > New Quarto Document**, choosing HTML output. 
 2. Click **Render**. The HTML appears in the Viewer or your browser.
-3. Check: is there a figure, a numbered cross-reference, a citation, and a bibliography at the end?
+3. Check: is there a figure, a numbered cross-reference, a citation, and a bibliography at the end? If not, add some examples based on the quarto samples provided in previous slides. 
 4. Change the inline calculation to the **median**, render again, and watch the number change.
 5. Commit and push `paper.qmd` and `references.bib` in GitHub Desktop.
 :::
