@@ -497,12 +497,12 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/me/Desktop/thesis"</span>)</span>
 <span id="cb2-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Works if the user is in the same folder structure</span></span>
-<span id="cb2-5"><a href="" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/survey.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"data/survey.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 <div class="fragment">
 <p><code>here()</code> finds the project root, so paths work for co-authors, on a cluster, and when rendering a Quarto document from a subfolder.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># Works anywhere the project is opened</span></span>
-<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"survey.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"survey.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
@@ -542,7 +542,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </div>
 </div>
 
-<img data-src="images/desktop1.png" style="width:100.0%" class="r-stretch"><p><countdown-timer class="countdown" id="timer_0adc85b6" minutes="2" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<img data-src="images/desktop1.png" style="width:100.0%" class="r-stretch"><p><countdown-timer class="countdown" id="timer_2dd5a995" minutes="2" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="build-a-project-skeleton" class="slide level2 activity-slide">
 <h2>Build a project skeleton</h2>
@@ -585,7 +585,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 <span id="cb5-4"><a href="" aria-hidden="true" tabindex="-1"></a>              <span class="at">y=</span><span class="fu">rnorm</span>(<span class="dv">16</span>))</span>
 <span id="cb5-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(dat, <span class="at">file=</span><span class="st">"data/my-data.rda"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div><p><countdown-timer class="countdown" id="timer_80ea3bd5" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+</div><p><countdown-timer class="countdown" id="timer_370da17c" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="first-commit" class="slide level2 activity-slide">
 <h2>First commit</h2>
@@ -627,7 +627,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </div>
 </div>
 </div>
-</div><p><countdown-timer class="countdown" id="timer_3bc199b9" minutes="4" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+</div><p><countdown-timer class="countdown" id="timer_80a66837" minutes="4" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="share-a-project-with-a-partner" class="slide level2 activity-slide">
 <h2>Share a project with a partner</h2>
@@ -651,7 +651,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </div>
 </div>
 </div>
-<p><countdown-timer class="countdown" id="timer_87b78773" minutes="4" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_82a43f2b" minutes="4" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="every-time" class="slide level2">
 <h2>Every time</h2>
@@ -733,7 +733,7 @@ Dianne Cook <br> Econometrics and Business Statistics <br> Monash University
 </div>
 </div>
 </div>
-<p><countdown-timer class="countdown" id="timer_585bcf40" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
+<p><countdown-timer class="countdown" id="timer_051a778a" minutes="6" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;--countdown-font-size:1.6rem;"></countdown-timer></p>
 </section>
 <section id="issues-pull-requests-branches" class="slide level2">
 <h2>Issues, pull requests, branches</h2>
