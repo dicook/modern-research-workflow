@@ -330,7 +330,7 @@ dat <- readr::read_csv(here::here("data", "survey.csv"))
 
 # Git basics {.transition-slide}
 
-## The four verbs
+## The three verbs
 
 ::: {.columns}
 ::: {.column .panel width="30%"}
@@ -454,9 +454,7 @@ save(dat, file="data/my-data.rda")
 1. **Owner**: on GitHub, open *Settings > Collaborators* and invite your partner
 2. **Partner**: accept the invitation, then **Clone** the repository in GitHub Desktop
 3. Both: edit *different* lines of `README.md`, commit, and push
-4. Pull each other's work. If the same line was edited, resolve the conflict together
-5. **Partner**: create a branch, change something, push, and open a **pull request**; **owner** reviews and merges
-6. Either: open an **issue** listing two next steps, and assign it
+4. Pull each other's work. 
 :::
 
 `r countdown::countdown(4, 0, top = 0, right = 0, font_size = "1.6rem")`
@@ -539,11 +537,10 @@ Pick one of them, edit the code, and remove the other choice, plus those marker 
 ::: callout-tip
 ## Create and fix a conflict
 
-1. Have your partner clone a copy of your repo, using *File > Clone Repository*
-2. You each edit the README.
-3. Have your partner push their change.
-4. Commit your change, and pull.
-5. Fix the conflict, commit and push your version to the repo.
+1. On the repo previously shared and edited, you each edit the README.
+2. Have your partner push their change.
+3. Commit your change, and pull.
+4. Fix the conflict, commit and push your version to the repo.
 
 :::
 
