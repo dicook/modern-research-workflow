@@ -168,7 +168,7 @@ Break
 [Publications and software]{.card-desc}
 :::
 
-::: {.material-card .soon}
+::: {.material-card}
 <i class="bi bi-easel"></i>
 
 [**Session 3 slides**](slides3.html){.stretched-link target="_blank" rel="noopener"}
